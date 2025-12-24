@@ -1,0 +1,15 @@
+#!/bin/sh
+# Set up radarr user and config directory
+
+PUID=${PUID:-1000}
+PGID=${PGID:-1000}
+
+echo "[radarr] Setting up radarr user with PUID=$PUID PGID=$PGID"
+
+# Modify radarr user/group to match requested UID/GID
+pw groupmod radarr -g "$PGID" 2>/dev/null || true
+
+# Ensure config directory has correct ownership
+chown -R bsd:bsd /config
+
+echo "[radarr] Configuration complete"

@@ -1,0 +1,48 @@
+ARG BASE_VERSION=15
+FROM ghcr.io/daemonless/base:${BASE_VERSION}
+
+ARG FREEBSD_ARCH=amd64
+LABEL org.opencontainers.image.title="radarr" \
+      org.opencontainers.image.description="Radarr movie management on FreeBSD" \
+      org.opencontainers.image.source="https://github.com/daemonless/radarr" \
+      org.opencontainers.image.url="https://radarr.video/" \
+      org.opencontainers.image.documentation="https://wiki.servarr.com/radarr" \
+      org.opencontainers.image.licenses="GPL-3.0-only" \
+      org.opencontainers.image.vendor="daemonless" \
+      org.opencontainers.image.authors="daemonless" \
+      io.daemonless.port="7878" \
+      io.daemonless.arch="${FREEBSD_ARCH}" \
+      io.daemonless.volumes="/movies,/downloads" \
+      org.freebsd.jail.allow.mlock="required"
+
+# Install Radarr from FreeBSD packages
+RUN pkg update && \
+    pkg install -y radarr && \
+    pkg clean -ay && \
+    rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
+
+# Override package_info to show container update instructions
+RUN RADARR_VERSION=$(pkg info radarr | sed -n 's/.*Version.*: *//p') && \
+    printf "UpdateMethod=docker\nBranch=master\nPackageVersion=%s\nPackageAuthor=[daemonless](https://github.com/daemonless/daemonless)\n" "$RADARR_VERSION" > /usr/local/share/radarr/package_info && \
+    mkdir -p /app && echo "$RADARR_VERSION" > /app/version
+
+# Create config directory
+RUN mkdir -p /config && \
+    chown -R bsd:bsd /config
+
+# Copy service definition
+COPY root/ /
+
+# Use pkg-specific run script
+COPY root/etc/services.d/radarr/run.pkg /etc/services.d/radarr/run
+
+# Make scripts executable
+RUN chmod +x /etc/services.d/radarr/run /etc/cont-init.d/* 2>/dev/null || true
+
+# Set up s6 service link
+RUN mkdir -p /run/s6/services/radarr && \
+    ln -sf /etc/services.d/radarr/run /run/s6/services/radarr/run
+
+EXPOSE 7878
+VOLUME /config
+

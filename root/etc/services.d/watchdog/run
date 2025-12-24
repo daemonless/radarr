@@ -1,0 +1,60 @@
+#!/bin/sh
+# Watchdog service - monitors /healthz and restarts app on failure
+#
+# Environment variables:
+#   WATCHDOG_WARMUP   - Initial delay before monitoring (default: 60)
+#   WATCHDOG_INTERVAL - Check interval in seconds (default: 30)
+#   WATCHDOG_COOLDOWN - Delay after restart before next check (default: 60)
+#   WATCHDOG_DISABLE  - Set to "true" to disable watchdog
+
+WARMUP="${WATCHDOG_WARMUP:-90}"
+INTERVAL="${WATCHDOG_INTERVAL:-30}"
+COOLDOWN="${WATCHDOG_COOLDOWN:-60}"
+
+# Allow disabling via environment
+if [ "${WATCHDOG_DISABLE}" = "true" ]; then
+    echo "[watchdog] Disabled via WATCHDOG_DISABLE=true"
+    exec sleep infinity
+fi
+
+echo "[watchdog] Starting with warmup=${WARMUP}s interval=${INTERVAL}s"
+
+# Initial warmup - let the app fully start
+sleep "$WARMUP"
+
+echo "[watchdog] Warmup complete, beginning health monitoring"
+
+FAIL_COUNT=0
+MAX_FAILURES=3
+
+while true; do
+    # Run health check (timeout handled by healthz script itself)
+    if /healthz >/dev/null 2>&1; then
+        # Health check passed
+        if [ "$FAIL_COUNT" -gt 0 ]; then
+            echo "[watchdog] Health restored after $FAIL_COUNT failures"
+            FAIL_COUNT=0
+        fi
+    else
+        FAIL_COUNT=$((FAIL_COUNT + 1))
+        echo "[watchdog] Health check failed (attempt $FAIL_COUNT/$MAX_FAILURES)"
+
+        if [ "$FAIL_COUNT" -ge "$MAX_FAILURES" ]; then
+            echo "[watchdog] Max failures reached, restarting service"
+
+            # Restart the main app service (radarr)
+            # Note: We explicitly target the app, not watchdog or hidden dirs
+            if [ -d /run/s6/services/radarr ]; then
+                echo "[watchdog] Restarting radarr"
+                s6-svc -t /run/s6/services/radarr
+            fi
+
+            FAIL_COUNT=0
+            echo "[watchdog] Cooldown for ${COOLDOWN}s"
+            sleep "$COOLDOWN"
+            continue
+        fi
+    fi
+
+    sleep "$INTERVAL"
+done
