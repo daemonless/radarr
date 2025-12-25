@@ -2,27 +2,37 @@ ARG BASE_VERSION=15
 FROM ghcr.io/daemonless/arr-base:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
+ARG PACKAGES="radarr"
+
 LABEL org.opencontainers.image.title="radarr" \
-      org.opencontainers.image.description="Radarr movie management on FreeBSD" \
-      org.opencontainers.image.source="https://github.com/daemonless/radarr" \
-      org.opencontainers.image.url="https://radarr.video/" \
-      org.opencontainers.image.documentation="https://wiki.servarr.com/radarr" \
-      org.opencontainers.image.licenses="GPL-3.0-only" \
-      org.opencontainers.image.vendor="daemonless" \
-      org.opencontainers.image.authors="daemonless" \
-      io.daemonless.port="7878" \
-      io.daemonless.arch="${FREEBSD_ARCH}" \
-      io.daemonless.volumes="/movies,/downloads" \
-      org.freebsd.jail.allow.mlock="required"
+    org.opencontainers.image.description="Radarr movie management on FreeBSD" \
+    org.opencontainers.image.source="https://github.com/daemonless/radarr" \
+    org.opencontainers.image.url="https://radarr.video/" \
+    org.opencontainers.image.documentation="https://wiki.servarr.com/radarr" \
+    org.opencontainers.image.licenses="GPL-3.0-only" \
+    org.opencontainers.image.vendor="daemonless" \
+    org.opencontainers.image.authors="daemonless" \
+    io.daemonless.port="7878" \
+    io.daemonless.arch="${FREEBSD_ARCH}" \
+    io.daemonless.volumes="/movies,/downloads" \
+    org.freebsd.jail.allow.mlock="required" \
+    io.daemonless.category="Media Management" \
+    io.daemonless.upstream-mode="servarr" \
+    io.daemonless.upstream-url="https://radarr.servarr.com/v1/update/master/changes?os=bsd" \
+    io.daemonless.packages="${PACKAGES}"
 
 ARG RADARR_BRANCH="master"
+
+# Install Radarr from FreeBSD packages
+RUN pkg update && \
+    pkg install -y ${PACKAGES}
 
 # Download and install Radarr
 RUN mkdir -p /usr/local/share/radarr && \
     RADARR_VERSION=$(fetch -qo - "https://radarr.servarr.com/v1/update/${RADARR_BRANCH}/changes?os=bsd&runtime=netcore" | \
-        grep -o '"version":"[^"]*"' | head -n 1 | cut -d '"' -f 4) && \
+    grep -o '"version":"[^"]*"' | head -n 1 | cut -d '"' -f 4) && \
     fetch -qo - "https://radarr.servarr.com/v1/update/${RADARR_BRANCH}/updatefile?os=bsd&arch=x64&runtime=netcore" | \
-        tar xzf - -C /usr/local/share/radarr --strip-components=1 && \
+    tar xzf - -C /usr/local/share/radarr --strip-components=1 && \
     rm -rf /usr/local/share/radarr/Radarr.Update && \
     chmod +x /usr/local/share/radarr/Radarr && \
     chmod -R o+rX /usr/local/share/radarr && \
