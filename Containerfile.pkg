@@ -2,7 +2,7 @@ ARG BASE_VERSION=15
 FROM ghcr.io/daemonless/base:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
-LABEL org.opencontainers.image.title="radarr" \
+LABEL org.opencontainers.image.title="Radarr" \
       org.opencontainers.image.description="Radarr movie management on FreeBSD" \
       org.opencontainers.image.source="https://github.com/daemonless/radarr" \
       org.opencontainers.image.url="https://radarr.video/" \

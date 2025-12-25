@@ -4,7 +4,7 @@ FROM ghcr.io/daemonless/arr-base:${BASE_VERSION}
 ARG FREEBSD_ARCH=amd64
 ARG PACKAGES="radarr"
 
-LABEL org.opencontainers.image.title="radarr" \
+LABEL org.opencontainers.image.title="Radarr" \
     org.opencontainers.image.description="Radarr movie management on FreeBSD" \
     org.opencontainers.image.source="https://github.com/daemonless/radarr" \
     org.opencontainers.image.url="https://radarr.video/" \
