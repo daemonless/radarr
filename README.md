@@ -21,7 +21,6 @@ This image uses `s6-log` for internal log rotation.
 - **Podman Logs**: Output is mirrored to the console, so `podman logs` still works.
 
 ## Quick Start
-
 ```bash
 podman run -d --name radarr \
   -p 7878:7878 \
@@ -55,6 +54,29 @@ services:
     annotations:
       org.freebsd.jail.allow.mlock: "true"
     restart: unless-stopped
+```
+
+## Ansible
+
+```yaml
+- name: Deploy Radarr
+  containers.podman.podman_container:
+    name: radarr
+    image: ghcr.io/daemonless/radarr:latest
+    state: started
+    restart_policy: unless-stopped
+    env:
+      PUID: "1000"
+      PGID: "1000"
+      TZ: "America/New_York"
+    ports:
+      - "7878:7878"
+    volumes:
+      - /data/config/radarr:/config
+      - /data/media/movies:/movies
+      - /data/downloads:/downloads
+    annotation:
+      org.freebsd.jail.allow.mlock: "true"
 ```
 
 ## Tags
