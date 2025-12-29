@@ -25,7 +25,9 @@ ARG RADARR_BRANCH="master"
 
 # Install Radarr from FreeBSD packages
 RUN pkg update && \
-    pkg install -y ${PACKAGES}
+    pkg install -y ${PACKAGES} && \
+    pkg clean -ay && \
+    rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
 
 # Download and install Radarr
 RUN mkdir -p /usr/local/share/radarr && \
