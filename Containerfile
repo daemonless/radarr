@@ -30,7 +30,7 @@ RUN pkg update && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
 
 # Download and install Radarr
-RUN mkdir -p /usr/local/share/radarr && \
+RUN mkdir -p /usr/local/share/radarr /config && \
     RADARR_VERSION=$(fetch -qo - "https://radarr.servarr.com/v1/update/${RADARR_BRANCH}/changes?os=bsd&runtime=netcore" | \
     grep -o '"version":"[^"]*"' | head -n 1 | cut -d '"' -f 4) && \
     fetch -qo - "https://radarr.servarr.com/v1/update/${RADARR_BRANCH}/updatefile?os=bsd&arch=x64&runtime=netcore" | \
@@ -39,10 +39,7 @@ RUN mkdir -p /usr/local/share/radarr && \
     chmod +x /usr/local/share/radarr/Radarr && \
     chmod -R o+rX /usr/local/share/radarr && \
     printf "UpdateMethod=docker\nBranch=${RADARR_BRANCH}\nPackageVersion=%s\nPackageAuthor=[daemonless](https://github.com/daemonless/daemonless)\n" "$RADARR_VERSION" > /usr/local/share/radarr/package_info && \
-    mkdir -p /app && echo "$RADARR_VERSION" > /app/version
-
-# Create config directory
-RUN mkdir -p /config && \
+    mkdir -p /app && echo "$RADARR_VERSION" > /app/version && \
     chown -R bsd:bsd /usr/local/share/radarr /config
 
 # Copy service definition and init scripts
