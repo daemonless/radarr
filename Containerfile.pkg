@@ -2,6 +2,7 @@ ARG BASE_VERSION=15
 FROM ghcr.io/daemonless/base:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
+ARG PKG_NAME=radarr
 LABEL org.opencontainers.image.title="Radarr" \
       org.opencontainers.image.description="Radarr movie management on FreeBSD" \
       org.opencontainers.image.source="https://github.com/daemonless/radarr" \
@@ -13,16 +14,17 @@ LABEL org.opencontainers.image.title="Radarr" \
       io.daemonless.port="7878" \
       io.daemonless.arch="${FREEBSD_ARCH}" \
       io.daemonless.volumes="/movies,/downloads" \
+      io.daemonless.pkg-name="${PKG_NAME}" \
       org.freebsd.jail.allow.mlock="required"
 
-# Install Radarr from FreeBSD packages
+# Install from FreeBSD packages
 RUN pkg update && \
-    pkg install -y radarr && \
+    pkg install -y ${PKG_NAME} && \
     pkg clean -ay && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
 
 # Override package_info to show container update instructions
-RUN RADARR_VERSION=$(pkg info radarr | sed -n 's/.*Version.*: *//p') && \
+RUN RADARR_VERSION=$(pkg info ${PKG_NAME} | sed -n 's/.*Version.*: *//p') && \
     printf "UpdateMethod=docker\nBranch=master\nPackageVersion=%s\nPackageAuthor=[daemonless](https://github.com/daemonless/daemonless)\n" "$RADARR_VERSION" > /usr/local/share/radarr/package_info && \
     mkdir -p /app && echo "$RADARR_VERSION" > /app/version
 
