@@ -5,7 +5,7 @@ ARG FREEBSD_ARCH=amd64
 ARG PACKAGES="radarr"
 ARG RADARR_BRANCH="master"
 ARG UPSTREAM_URL="https://radarr.servarr.com/v1/update/master/changes?os=bsd"
-ARG UPSTREAM_SED="s/.*\"version\":\"\\([^\"]*\\)\".*/\\1/p"
+ARG UPSTREAM_SED="grep -o '\"version\":\"[^\"]*\"' | head -1 | cut -d'\"' -f4"
 
 LABEL org.opencontainers.image.title="Radarr" \
     org.opencontainers.image.description="Radarr movie management on FreeBSD" \
@@ -33,7 +33,7 @@ RUN pkg update && \
 # Download and install Radarr
 RUN mkdir -p /usr/local/share/radarr /config && \
     RADARR_VERSION=$(fetch -qo - "https://radarr.servarr.com/v1/update/${RADARR_BRANCH}/changes?os=bsd&runtime=netcore" | \
-    sed -n "${UPSTREAM_SED}" | head -1) && \
+    grep -o '"version":"[^"]*"' | head -1 | cut -d'"' -f4) && \
     fetch -qo - "https://radarr.servarr.com/v1/update/${RADARR_BRANCH}/updatefile?os=bsd&arch=x64&runtime=netcore" | \
     tar xzf - -C /usr/local/share/radarr --strip-components=1 && \
     rm -rf /usr/local/share/radarr/Radarr.Update && \
