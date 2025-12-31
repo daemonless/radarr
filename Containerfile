@@ -6,6 +6,9 @@ ARG PACKAGES="radarr"
 ARG RADARR_BRANCH="master"
 ARG UPSTREAM_URL="https://radarr.servarr.com/v1/update/master/changes?os=bsd&runtime=netcore"
 ARG UPSTREAM_JQ=".[0].version"
+ARG HEALTHCHECK_ENDPOINT="http://localhost:7878/ping"
+
+ENV HEALTHCHECK_URL="${HEALTHCHECK_ENDPOINT}"
 
 LABEL org.opencontainers.image.title="Radarr" \
     org.opencontainers.image.description="Radarr movie management on FreeBSD" \
@@ -22,6 +25,7 @@ LABEL org.opencontainers.image.title="Radarr" \
     io.daemonless.category="Media Management" \
     io.daemonless.upstream-url="${UPSTREAM_URL}" \
     io.daemonless.upstream-jq="${UPSTREAM_JQ}" \
+    io.daemonless.healthcheck-url="${HEALTHCHECK_ENDPOINT}" \
     io.daemonless.packages="${PACKAGES}"
 
 # Install Radarr from FreeBSD packages
