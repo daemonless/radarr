@@ -21,7 +21,7 @@ LABEL org.opencontainers.image.title="Radarr" \
     org.freebsd.jail.allow.mlock="required" \
     io.daemonless.category="Media Management" \
     io.daemonless.upstream-url="${UPSTREAM_URL}" \
-    io.daemonless.upstream-sed="${UPSTREAM_SED}" \
+    io.daemonless.upstream-jq="${UPSTREAM_JQ}" \
     io.daemonless.packages="${PACKAGES}"
 
 # Install Radarr from FreeBSD packages
