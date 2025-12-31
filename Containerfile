@@ -3,6 +3,9 @@ FROM ghcr.io/daemonless/arr-base:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
 ARG PACKAGES="radarr"
+ARG RADARR_BRANCH="master"
+ARG UPSTREAM_URL="https://radarr.servarr.com/v1/update/master/changes?os=bsd"
+ARG UPSTREAM_SED="s/.*\"version\":\"\\([^\"]*\\)\".*/\\1/p"
 
 LABEL org.opencontainers.image.title="Radarr" \
     org.opencontainers.image.description="Radarr movie management on FreeBSD" \
@@ -17,11 +20,9 @@ LABEL org.opencontainers.image.title="Radarr" \
     io.daemonless.volumes="/movies,/downloads" \
     org.freebsd.jail.allow.mlock="required" \
     io.daemonless.category="Media Management" \
-    io.daemonless.upstream-mode="servarr" \
-    io.daemonless.upstream-url="https://radarr.servarr.com/v1/update/master/changes?os=bsd" \
+    io.daemonless.upstream-url="${UPSTREAM_URL}" \
+    io.daemonless.upstream-sed="${UPSTREAM_SED}" \
     io.daemonless.packages="${PACKAGES}"
-
-ARG RADARR_BRANCH="master"
 
 # Install Radarr from FreeBSD packages
 RUN pkg update && \
@@ -32,7 +33,7 @@ RUN pkg update && \
 # Download and install Radarr
 RUN mkdir -p /usr/local/share/radarr /config && \
     RADARR_VERSION=$(fetch -qo - "https://radarr.servarr.com/v1/update/${RADARR_BRANCH}/changes?os=bsd&runtime=netcore" | \
-    grep -o '"version":"[^"]*"' | head -n 1 | cut -d '"' -f 4) && \
+    sed -n "${UPSTREAM_SED}" | head -1) && \
     fetch -qo - "https://radarr.servarr.com/v1/update/${RADARR_BRANCH}/updatefile?os=bsd&arch=x64&runtime=netcore" | \
     tar xzf - -C /usr/local/share/radarr --strip-components=1 && \
     rm -rf /usr/local/share/radarr/Radarr.Update && \
