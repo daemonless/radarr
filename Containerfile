@@ -4,8 +4,8 @@ FROM ghcr.io/daemonless/arr-base:${BASE_VERSION}
 ARG FREEBSD_ARCH=amd64
 ARG PACKAGES="radarr"
 ARG RADARR_BRANCH="master"
-ARG UPSTREAM_URL="https://radarr.servarr.com/v1/update/master/changes?os=bsd"
-ARG UPSTREAM_SED="grep -o '\"version\":\"[^\"]*\"' | head -1 | cut -d'\"' -f4"
+ARG UPSTREAM_URL="https://radarr.servarr.com/v1/update/master/changes?os=bsd&runtime=netcore"
+ARG UPSTREAM_JQ=".[0].version"
 
 LABEL org.opencontainers.image.title="Radarr" \
     org.opencontainers.image.description="Radarr movie management on FreeBSD" \
