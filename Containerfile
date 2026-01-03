@@ -4,7 +4,8 @@ FROM ghcr.io/daemonless/arr-base:${BASE_VERSION}
 ARG FREEBSD_ARCH=amd64
 ARG PACKAGES="radarr"
 ARG RADARR_BRANCH="master"
-ARG UPSTREAM_URL="https://radarr.servarr.com/v1/update/master/changes?os=bsd&runtime=netcore"
+ARG UPSTREAM_URL="https://radarr.servarr.com/v1/update/${RADARR_BRANCH}/changes?os=bsd&runtime=netcore"
+ARG DOWNLOAD_URL="https://radarr.servarr.com/v1/update/${RADARR_BRANCH}/updatefile?os=bsd&arch=x64&runtime=netcore"
 ARG UPSTREAM_JQ=".[0].version"
 ARG HEALTHCHECK_ENDPOINT="http://localhost:7878/ping"
 
@@ -35,17 +36,8 @@ RUN pkg update && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
 
 # Download and install Radarr
-RUN mkdir -p /usr/local/share/radarr /config && \
-    RADARR_VERSION=$(fetch -qo - "https://radarr.servarr.com/v1/update/${RADARR_BRANCH}/changes?os=bsd&runtime=netcore" | \
-    grep -o '"version":"[^"]*"' | head -1 | cut -d'"' -f4) && \
-    fetch -qo - "https://radarr.servarr.com/v1/update/${RADARR_BRANCH}/updatefile?os=bsd&arch=x64&runtime=netcore" | \
-    tar xzf - -C /usr/local/share/radarr --strip-components=1 && \
-    rm -rf /usr/local/share/radarr/Radarr.Update && \
-    chmod +x /usr/local/share/radarr/Radarr && \
-    chmod -R o+rX /usr/local/share/radarr && \
-    printf "UpdateMethod=docker\nBranch=${RADARR_BRANCH}\nPackageVersion=%s\nPackageAuthor=[daemonless](https://github.com/daemonless/daemonless)\n" "$RADARR_VERSION" > /usr/local/share/radarr/package_info && \
-    mkdir -p /app && echo "$RADARR_VERSION" > /app/version && \
-    chown -R bsd:bsd /usr/local/share/radarr /config
+RUN RADARR_VERSION=$(fetch -qo - "${UPSTREAM_URL}" | grep -o '"version":"[^"]*"' | head -1 | cut -d'"' -f4) && \
+    install-arr.sh "radarr" "Radarr" "$RADARR_VERSION" "${DOWNLOAD_URL}" "${RADARR_BRANCH}"
 
 # Copy service definition and init scripts
 COPY root/ /
