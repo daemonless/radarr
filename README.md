@@ -1,40 +1,17 @@
-# radarr
+# Radarr
 
-Movie collection manager for Usenet and BitTorrent users.
+Radarr movie management on FreeBSD.
 
-## Environment Variables
+| | |
+|---|---|
+| **Port** | 7878 |
+| **Registry** | `ghcr.io/daemonless/radarr` |
+| **Source** | [https://github.com/Radarr/Radarr](https://github.com/Radarr/Radarr) |
+| **Website** | [https://radarr.video/](https://radarr.video/) |
 
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `PUID` | User ID for the application process | `1000` |
-| `PGID` | Group ID for the application process | `1000` |
-| `TZ` | Timezone for the container | `UTC` |
-| `S6_LOG_ENABLE` | Enable/Disable file logging | `1` |
-| `S6_LOG_MAX_SIZE` | Max size per log file (bytes) | `1048576` |
-| `S6_LOG_MAX_FILES` | Number of rotated log files to keep | `10` |
+## Deployment
 
-## Logging
-
-This image uses `s6-log` for internal log rotation.
-- **System Logs**: Captured from console and stored at `/config/logs/daemonless/radarr/`.
-- **Application Logs**: Managed by the app and typically found in `/config/logs/`.
-- **Podman Logs**: Output is mirrored to the console, so `podman logs` still works.
-
-## Quick Start
-```bash
-podman run -d --name radarr \
-  -p 7878:7878 \
-  --annotation 'org.freebsd.jail.allow.mlock=true' \
-  -e PUID=1000 -e PGID=1000 \
-  -v /path/to/config:/config \
-  -v /path/to/movies:/movies \
-  -v /path/to/downloads:/downloads \
-  ghcr.io/daemonless/radarr:latest
-```
-
-Access at: http://localhost:7878
-
-## podman-compose
+### Podman Compose
 
 ```yaml
 services:
@@ -44,11 +21,11 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=America/New_York
+      - TZ=UTC
     volumes:
-      - /data/config/radarr:/config
-      - /data/media/movies:/movies
-      - /data/downloads:/downloads
+      - /path/to/containers/radarr:/config
+      - /path/to/movies:/movies # optional
+      - /path/to/downloads:/downloads # optional
     ports:
       - 7878:7878
     annotations:
@@ -56,68 +33,71 @@ services:
     restart: unless-stopped
 ```
 
-## Ansible
+### Podman CLI
+
+```bash
+podman run -d --name radarr \
+  -p 7878:7878 \
+  --annotation 'org.freebsd.jail.allow.mlock=true' \
+  -e PUID=@PUID@ \
+  -e PGID=@PGID@ \
+  -e TZ=@TZ@ \
+  -v /path/to/containers/radarr:/config \ 
+  -v /path/to/movies:/movies \  # optional
+  -v /path/to/downloads:/downloads \  # optional
+  ghcr.io/daemonless/radarr:latest
+```
+Access at: `http://localhost:7878`
+
+### Ansible
 
 ```yaml
-- name: Deploy Radarr
+- name: Deploy radarr
   containers.podman.podman_container:
     name: radarr
     image: ghcr.io/daemonless/radarr:latest
     state: started
-    restart_policy: unless-stopped
+    restart_policy: always
     env:
       PUID: "1000"
       PGID: "1000"
-      TZ: "America/New_York"
+      TZ: "UTC"
     ports:
       - "7878:7878"
     volumes:
-      - /data/config/radarr:/config
-      - /data/media/movies:/movies
-      - /data/downloads:/downloads
+      - "/path/to/containers/radarr:/config"
+      - "/path/to/movies:/movies" # optional
+      - "/path/to/downloads:/downloads" # optional
     annotation:
       org.freebsd.jail.allow.mlock: "true"
 ```
 
-## Tags
+## Configuration
 
-| Tag | Source | Description |
-|-----|--------|-------------|
-| `:latest` | [Upstream Releases](https://radarr.servarr.com/) | Latest upstream release |
-| `:pkg` | `net-p2p/radarr` | FreeBSD quarterly packages |
-| `:pkg-latest` | `net-p2p/radarr` | FreeBSD latest packages |
-
-## Environment Variables
+### Environment Variables
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `PUID` | 1000 | User ID for app |
-| `PGID` | 1000 | Group ID for app |
-| `TZ` | UTC | Timezone |
+| `PUID` | `1000` | User ID for the application process |
+| `PGID` | `1000` | Group ID for the application process |
+| `TZ` | `UTC` | Timezone for the container |
 
-## Volumes
+### Volumes
 
 | Path | Description |
 |------|-------------|
 | `/config` | Configuration directory |
-| `/movies` | Movie library |
-| `/downloads` | Download directory |
+| `/movies` | Movie library (Optional) |
+| `/downloads` | Download directory (Optional) |
 
-## Ports
+### Ports
 
-| Port | Description |
-|------|-------------|
-| 7878 | Web UI |
+| Port | Protocol | Description |
+|------|----------|-------------|
+| `7878` | TCP | Web UI |
 
 ## Notes
 
-- **User:** `bsd` (UID/GID set via PUID/PGID, default 1000)
-- **Base:** Built on `ghcr.io/daemonless/base-image` (FreeBSD)
-
-### Specific Requirements
-- **.NET App:** Requires `--annotation 'org.freebsd.jail.allow.mlock=true'` (Requires [patched ocijail](https://github.com/daemonless/daemonless#ocijail-patch))
-
-## Links
-
-- [Website](https://radarr.video/)
-- [FreshPorts](https://www.freshports.org/net-p2p/radarr/)
+- **User:** `bsd` (UID/GID set via PUID/PGID)
+- **Base:** Built on `ghcr.io/daemonless/base` (FreeBSD)
+- **.NET App:** Requires `--annotation 'org.freebsd.jail.allow.mlock=true'` and a [patched ocijail](https://daemonless.io/guides/ocijail-patch).

@@ -1,0 +1,50 @@
+name: radarr
+
+x-daemonless:
+  title: "Radarr"
+  icon: ":material-movie:"
+  category: "Media Management"
+  description: "Radarr movie management on FreeBSD."
+  upstream_url: "https://github.com/Radarr/Radarr"
+  web_url: "https://radarr.video/"
+  freshports_url: "https://www.freshports.org/net-p2p/radarr/"
+  user: "bsd"
+  mlock: true
+  
+  docs:
+    env:
+      PUID: "User ID for the application process"
+      PGID: "Group ID for the application process"
+      TZ: "Timezone for the container"
+    volumes:
+      /config: "Configuration directory"
+      /movies:
+        desc: "Movie library"
+        optional: true
+      /downloads:
+        desc: "Download directory"
+        optional: true
+    ports:
+      7878: "Web UI"
+
+services:
+  radarr:
+    image: ghcr.io/daemonless/radarr:latest
+    container_name: radarr
+    restart: unless-stopped
+    
+    annotations:
+      org.freebsd.jail.allow.mlock: "true"
+
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=UTC
+
+    volumes:
+      - /path/to/containers/radarr:/config
+      - /path/to/movies:/movies
+      - /path/to/downloads:/downloads
+
+    ports:
+      - 7878:7878
