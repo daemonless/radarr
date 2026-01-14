@@ -59,9 +59,9 @@ Access at: `http://localhost:7878`
     state: started
     restart_policy: always
     env:
-      PUID: "1000"
-      PGID: "1000"
-      TZ: "UTC"
+      PUID: "@PUID@"
+      PGID: "@PGID@"
+      TZ: "@TZ@"
     ports:
       - "7878:7878"
     volumes:
@@ -73,7 +73,6 @@ Access at: `http://localhost:7878`
 ```
 
 ## Configuration
-
 ### Environment Variables
 
 | Variable | Default | Description |
@@ -81,7 +80,6 @@ Access at: `http://localhost:7878`
 | `PUID` | `1000` | User ID for the application process |
 | `PGID` | `1000` | Group ID for the application process |
 | `TZ` | `UTC` | Timezone for the container |
-
 ### Volumes
 
 | Path | Description |
@@ -89,7 +87,6 @@ Access at: `http://localhost:7878`
 | `/config` | Configuration directory |
 | `/movies` | Movie library (Optional) |
 | `/downloads` | Download directory (Optional) |
-
 ### Ports
 
 | Port | Protocol | Description |
