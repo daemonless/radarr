@@ -1,0 +1,62 @@
+ARG BASE_VERSION=15
+FROM ghcr.io/daemonless/base:${BASE_VERSION}
+
+ARG FREEBSD_ARCH=amd64
+ARG PKG_NAME=radarr
+LABEL org.opencontainers.image.title="{{ title }}" \
+      org.opencontainers.image.description="{{ description }}" \
+      org.opencontainers.image.source="{{ repo_url }}" \
+      org.opencontainers.image.url="{{ web_url }}" \
+      org.opencontainers.image.documentation="https://wiki.servarr.com/radarr" \
+      org.opencontainers.image.licenses="GPL-3.0-only" \
+      org.opencontainers.image.vendor="daemonless" \
+      org.opencontainers.image.authors="daemonless" \
+{%- if ports %}
+      io.daemonless.port="{{ ports[0].port }}" \
+{%- endif %}
+      io.daemonless.arch="${FREEBSD_ARCH}" \
+{%- if volumes %}
+      io.daemonless.volumes="{{ volumes | map(attribute='path') | join(',') }}" \
+{%- endif %}
+{%- if mlock %}
+      org.freebsd.jail.allow.mlock="required" \
+{%- endif %}
+      io.daemonless.pkg-name="${PKG_NAME}"
+
+# Install from FreeBSD packages
+RUN pkg update && \
+    pkg install -y ${PKG_NAME} && \
+    pkg clean -ay && \
+    rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
+
+# Override package_info to show container update instructions
+RUN RADARR_VERSION=$(pkg info ${PKG_NAME} | sed -n 's/.*Version.*: *//p') && \
+    printf "UpdateMethod=docker\nBranch=master\nPackageVersion=%s\nPackageAuthor=[daemonless](https://github.com/daemonless/daemonless)\n" "$RADARR_VERSION" > /usr/local/share/radarr/package_info && \
+    mkdir -p /app && echo "$RADARR_VERSION" > /app/version
+
+# Create config directory
+RUN mkdir -p /config && \
+    chown -R bsd:bsd /config
+
+# Copy service definition
+COPY root/ /
+
+# Use pkg-specific run script
+COPY root/etc/services.d/radarr/run.pkg /etc/services.d/radarr/run
+
+# Make scripts executable
+RUN chmod +x /etc/services.d/radarr/run /etc/cont-init.d/* 2>/dev/null || true
+
+# Set up s6 service link
+RUN mkdir -p /run/s6/services/radarr && \
+    ln -sf /etc/services.d/radarr/run /run/s6/services/radarr/run
+
+# --- Expose (Injected by Generator) ---
+{%- if ports %}
+EXPOSE {{ ports | map(attribute='port') | join(' ') }}
+{%- endif %}
+
+# --- Volumes (Injected by Generator) ---
+{%- if volumes %}
+VOLUME {{ volumes | map(attribute='path') | join(' ') }}
+{%- endif %}

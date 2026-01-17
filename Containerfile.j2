@@ -1,0 +1,66 @@
+ARG BASE_VERSION=15
+FROM ghcr.io/daemonless/arr-base:${BASE_VERSION}
+
+ARG FREEBSD_ARCH=amd64
+ARG PACKAGES="radarr"
+ARG RADARR_BRANCH="master"
+ARG UPSTREAM_URL="https://radarr.servarr.com/v1/update/${RADARR_BRANCH}/changes?os=bsd&runtime=netcore"
+ARG DOWNLOAD_URL="https://radarr.servarr.com/v1/update/${RADARR_BRANCH}/updatefile?os=bsd&arch=x64&runtime=netcore"
+ARG UPSTREAM_JQ=".[0].version"
+{%- if ports %}
+ARG HEALTHCHECK_ENDPOINT="http://localhost:{{ ports[0].port }}/ping"
+{%- else %}
+ARG HEALTHCHECK_ENDPOINT="http://localhost:7878/ping"
+{%- endif %}
+
+ENV HEALTHCHECK_URL="${HEALTHCHECK_ENDPOINT}"
+
+LABEL org.opencontainers.image.title="{{ title }}" \
+      org.opencontainers.image.description="{{ description }}" \
+      org.opencontainers.image.source="{{ repo_url }}" \
+      org.opencontainers.image.url="{{ web_url }}" \
+      org.opencontainers.image.documentation="https://wiki.servarr.com/radarr" \
+      org.opencontainers.image.licenses="GPL-3.0-only" \
+      org.opencontainers.image.vendor="daemonless" \
+      org.opencontainers.image.authors="daemonless" \
+      io.daemonless.category="{{ category }}" \
+{%- if ports %}
+      io.daemonless.port="{{ ports[0].port }}" \
+{%- endif %}
+{%- if volumes %}
+      io.daemonless.volumes="{{ volumes | map(attribute='path') | join(',') }}" \
+{%- endif %}
+{%- if mlock %}
+      org.freebsd.jail.allow.mlock="required" \
+{%- endif %}
+      io.daemonless.arch="${FREEBSD_ARCH}" \
+      io.daemonless.upstream-url="${UPSTREAM_URL}" \
+      io.daemonless.upstream-jq="${UPSTREAM_JQ}" \
+      io.daemonless.healthcheck-url="${HEALTHCHECK_ENDPOINT}" \
+      io.daemonless.packages="${PACKAGES}"
+
+# Install Radarr from FreeBSD packages
+RUN pkg update && \
+    pkg install -y ${PACKAGES} && \
+    pkg clean -ay && \
+    rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
+
+# Download and install Radarr
+RUN RADARR_VERSION=$(fetch -qo - "${UPSTREAM_URL}" | grep -o '"version":"[^"].*"' | head -1 | cut -d'"' -f4) && \
+    install-arr.sh "radarr" "Radarr" "$RADARR_VERSION" "${DOWNLOAD_URL}" "${RADARR_BRANCH}"
+
+# Copy service definition and init scripts
+COPY root/ /
+
+# Make scripts executable
+RUN chmod +x /etc/services.d/radarr/run /etc/cont-init.d/* 2>/dev/null || true
+
+# --- Expose (Injected by Generator) ---
+{%- if ports %}
+EXPOSE {{ ports | map(attribute='port') | join(' ') }}
+{%- endif %}
+
+# --- Volumes (Injected by Generator) ---
+{%- if volumes %}
+VOLUME {{ volumes | map(attribute='path') | join(' ') }}
+{%- endif %}
