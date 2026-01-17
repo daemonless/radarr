@@ -8,6 +8,10 @@ export XDG_DATA_HOME=/config/.local/share
 export LD_LIBRARY_PATH=/usr/local/lib
 export CLR_OPENSSL_VERSION_OVERRIDE=35
 export DOTNET_SYSTEM_NET_DISABLEIPV6=1
+export System_Globalization_Invariant=true
+
+# Signal readiness when the port is responsive
+s6-ready-when fetch -qo /dev/null http://localhost:7878/ping
 
 cd /config
 exec /usr/local/bin/s6-setuidgid bsd /usr/local/share/radarr/bin/Radarr -nobrowser -data=/config

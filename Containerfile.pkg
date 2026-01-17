@@ -32,6 +32,9 @@ RUN RADARR_VERSION=$(pkg info ${PKG_NAME} | sed -n 's/.*Version.*: *//p') && \
 RUN mkdir -p /config && \
     chown -R bsd:bsd /config
 
+# Fix SQLite library name for .NET
+RUN ln -sf /usr/local/lib/libsqlite3.so /usr/local/share/radarr/bin/libe_sqlite3.so
+
 # Copy service definition
 COPY root/ /
 
