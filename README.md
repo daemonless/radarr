@@ -11,6 +11,7 @@ Radarr movie management on FreeBSD.
 |---|---|
 | **Port** | 7878 |
 | **Registry** | `ghcr.io/daemonless/radarr` |
+| **Docs** | [daemonless.io/images/radarr](https://daemonless.io/images/radarr/) |
 | **Source** | [https://github.com/Radarr/Radarr](https://github.com/Radarr/Radarr) |
 | **Website** | [https://radarr.video/](https://radarr.video/) |
 
