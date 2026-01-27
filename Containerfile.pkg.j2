@@ -3,6 +3,8 @@ FROM ghcr.io/daemonless/base:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
 ARG PKG_NAME=radarr
+
+# --- Metadata (Injected by Generator) ---
 LABEL org.opencontainers.image.title="{{ title }}" \
       org.opencontainers.image.description="{{ description }}" \
       org.opencontainers.image.source="{{ repo_url }}" \
@@ -11,17 +13,18 @@ LABEL org.opencontainers.image.title="{{ title }}" \
       org.opencontainers.image.licenses="GPL-3.0-only" \
       org.opencontainers.image.vendor="daemonless" \
       org.opencontainers.image.authors="daemonless" \
+      io.daemonless.category="{{ category }}" \
 {%- if ports %}
       io.daemonless.port="{{ ports[0].port }}" \
 {%- endif %}
-      io.daemonless.arch="${FREEBSD_ARCH}" \
 {%- if volumes %}
       io.daemonless.volumes="{{ volumes | map(attribute='path') | join(',') }}" \
 {%- endif %}
 {%- if mlock %}
       org.freebsd.jail.allow.mlock="required" \
 {%- endif %}
-      io.daemonless.pkg-name="${PKG_NAME}"
+      io.daemonless.pkg-name="${PKG_NAME}" \
+      io.daemonless.arch="${FREEBSD_ARCH}"
 
 # Install from FreeBSD packages
 RUN pkg update && \

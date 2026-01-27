@@ -9,6 +9,8 @@ FROM ghcr.io/daemonless/base:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
 ARG PKG_NAME=radarr
+
+# --- Metadata (Injected by Generator) ---
 LABEL org.opencontainers.image.title="Radarr" \
       org.opencontainers.image.description="Radarr movie management on FreeBSD." \
       org.opencontainers.image.source="https://github.com/daemonless/radarr" \
@@ -17,11 +19,12 @@ LABEL org.opencontainers.image.title="Radarr" \
       org.opencontainers.image.licenses="GPL-3.0-only" \
       org.opencontainers.image.vendor="daemonless" \
       org.opencontainers.image.authors="daemonless" \
+      io.daemonless.category="Media Management" \
       io.daemonless.port="7878" \
-      io.daemonless.arch="${FREEBSD_ARCH}" \
       io.daemonless.volumes="/config,/movies,/downloads" \
       org.freebsd.jail.allow.mlock="required" \
-      io.daemonless.pkg-name="${PKG_NAME}"
+      io.daemonless.pkg-name="${PKG_NAME}" \
+      io.daemonless.arch="${FREEBSD_ARCH}"
 
 # Install from FreeBSD packages
 RUN pkg update && \
