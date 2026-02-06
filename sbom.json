@@ -1,12 +1,12 @@
 {
   "image": "radarr",
-  "generated": "2026-02-05T23:30:31Z",
+  "generated": "2026-02-06T00:28:12Z",
   "tags": {
     "latest": {
       "arch": "amd64",
       "app_version": "6.0.4.10291",
       "source": "upstream-binary",
-      "generated": "2026-02-05T23:28:57Z",
+      "generated": "2026-02-06T00:27:57Z",
       "packages": {
         "freebsd": [
           {
@@ -207,7 +207,7 @@
           },
           {
             "name": "openssl",
-            "version": "3.0.18,1"
+            "version": "3.0.19,1"
           },
           {
             "name": "pkg",
@@ -568,14 +568,6 @@
             "version": "8.6.0"
           },
           {
-            "name": "Radarr",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Radarr.Api.V3",
-            "version": "1.0.0"
-          },
-          {
             "name": "Radarr.Common",
             "version": "1.0.0"
           },
@@ -584,11 +576,19 @@
             "version": "1.0.0"
           },
           {
+            "name": "Radarr.Host",
+            "version": "1.0.0"
+          },
+          {
             "name": "Radarr.Http",
             "version": "1.0.0"
           },
           {
             "name": "Radarr.Mono",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Radarr.SignalR",
             "version": "1.0.0"
           },
           {
@@ -849,7 +849,7 @@
       "arch": "amd64",
       "app_version": "6.0.4.10291_1",
       "source": "freebsd-latest",
-      "generated": "2026-02-05T23:29:35Z",
+      "generated": "2026-02-06T00:24:10Z",
       "packages": {
         "freebsd": [
           {
@@ -1371,19 +1371,19 @@
             "version": "8.6.0"
           },
           {
+            "name": "Radarr.Api.V3",
+            "version": "1.0.0"
+          },
+          {
             "name": "Radarr.Common",
             "version": "1.0.0"
           },
           {
+            "name": "Radarr.Core",
+            "version": "1.0.0"
+          },
+          {
             "name": "Radarr.Host",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Radarr.Http",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Radarr.Mono",
             "version": "1.0.0"
           },
           {
@@ -1556,7 +1556,7 @@
       "arch": "amd64",
       "app_version": "5.28.0.10274",
       "source": "freebsd-quarterly",
-      "generated": "2026-02-05T23:30:17Z",
+      "generated": "2026-02-06T00:06:35Z",
       "packages": {
         "freebsd": [
           {
@@ -2018,11 +2018,19 @@
             "version": "8.6.0"
           },
           {
+            "name": "Radarr",
+            "version": "1.0.0"
+          },
+          {
             "name": "Radarr.Common",
             "version": "1.0.0"
           },
           {
             "name": "Radarr.Core",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Radarr.Host",
             "version": "1.0.0"
           },
           {
@@ -2200,11 +2208,11 @@
       },
       "summary": {
         "freebsd": 48,
-        "dotnet": 110,
+        "dotnet": 112,
         "python": 0,
         "node": 0,
         "go": 0,
-        "total": 158
+        "total": 160
       }
     }
   }
