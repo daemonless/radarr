@@ -1,12 +1,12 @@
 {
   "image": "radarr",
-  "generated": "2026-02-06T00:28:12Z",
+  "generated": "2026-02-07T10:58:39Z",
   "tags": {
     "latest": {
       "arch": "amd64",
       "app_version": "6.0.4.10291",
       "source": "upstream-binary",
-      "generated": "2026-02-06T00:27:57Z",
+      "generated": "2026-02-07T10:58:22Z",
       "packages": {
         "freebsd": [
           {
@@ -568,6 +568,10 @@
             "version": "8.6.0"
           },
           {
+            "name": "Radarr.Api.V3",
+            "version": "1.0.0"
+          },
+          {
             "name": "Radarr.Common",
             "version": "1.0.0"
           },
@@ -577,10 +581,6 @@
           },
           {
             "name": "Radarr.Host",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Radarr.Http",
             "version": "1.0.0"
           },
           {
@@ -832,16 +832,24 @@
             "version": "4.3.0"
           }
         ],
-        "python": [],
+        "go": [],
+        "java": [],
         "node": [],
-        "go": []
+        "php": [],
+        "python": [],
+        "ruby": [],
+        "rust": []
       },
       "summary": {
         "freebsd": 57,
         "dotnet": 148,
-        "python": 0,
-        "node": 0,
         "go": 0,
+        "java": 0,
+        "node": 0,
+        "php": 0,
+        "python": 0,
+        "ruby": 0,
+        "rust": 0,
         "total": 205
       }
     },
@@ -849,7 +857,7 @@
       "arch": "amd64",
       "app_version": "6.0.4.10291_1",
       "source": "freebsd-latest",
-      "generated": "2026-02-06T00:24:10Z",
+      "generated": "2026-02-07T10:57:24Z",
       "packages": {
         "freebsd": [
           {
@@ -1371,7 +1379,7 @@
             "version": "8.6.0"
           },
           {
-            "name": "Radarr.Api.V3",
+            "name": "Radarr",
             "version": "1.0.0"
           },
           {
@@ -1383,7 +1391,7 @@
             "version": "1.0.0"
           },
           {
-            "name": "Radarr.Host",
+            "name": "Radarr.Mono",
             "version": "1.0.0"
           },
           {
@@ -1539,16 +1547,24 @@
             "version": "4.3.0"
           }
         ],
-        "python": [],
+        "go": [],
+        "java": [],
         "node": [],
-        "go": []
+        "php": [],
+        "python": [],
+        "ruby": [],
+        "rust": []
       },
       "summary": {
         "freebsd": 48,
         "dotnet": 123,
-        "python": 0,
-        "node": 0,
         "go": 0,
+        "java": 0,
+        "node": 0,
+        "php": 0,
+        "python": 0,
+        "ruby": 0,
+        "rust": 0,
         "total": 171
       }
     },
@@ -1556,7 +1572,7 @@
       "arch": "amd64",
       "app_version": "5.28.0.10274",
       "source": "freebsd-quarterly",
-      "generated": "2026-02-06T00:06:35Z",
+      "generated": "2026-02-07T10:57:35Z",
       "packages": {
         "freebsd": [
           {
@@ -2018,10 +2034,6 @@
             "version": "8.6.0"
           },
           {
-            "name": "Radarr",
-            "version": "1.0.0"
-          },
-          {
             "name": "Radarr.Common",
             "version": "1.0.0"
           },
@@ -2030,7 +2042,7 @@
             "version": "1.0.0"
           },
           {
-            "name": "Radarr.Host",
+            "name": "Radarr.Mono",
             "version": "1.0.0"
           },
           {
@@ -2202,17 +2214,25 @@
             "version": "6.0.0"
           }
         ],
-        "python": [],
+        "go": [],
+        "java": [],
         "node": [],
-        "go": []
+        "php": [],
+        "python": [],
+        "ruby": [],
+        "rust": []
       },
       "summary": {
         "freebsd": 48,
-        "dotnet": 112,
-        "python": 0,
-        "node": 0,
+        "dotnet": 111,
         "go": 0,
-        "total": 160
+        "java": 0,
+        "node": 0,
+        "php": 0,
+        "python": 0,
+        "ruby": 0,
+        "rust": 0,
+        "total": 159
       }
     }
   }
