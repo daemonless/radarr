@@ -8,7 +8,7 @@ steps:
       GITHUB_ACTOR:
         from_secret: GITHUB_USER
     commands:
-      - fetch -qo dbuild-ci.sh "https://raw.githubusercontent.com/daemonless/daemonless/main/scripts/dbuild-ci.sh"
+      - fetch -qo dbuild-ci.sh "https://gitea.ahze.lan/ahze/daemonless/raw/branch/main/scripts/dbuild-ci.sh"
       - sh dbuild-ci.sh
 
 when:
