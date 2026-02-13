@@ -1,3 +1,15 @@
 icon: ":material-movie:"
 cit:
   port: 7878
+
+build:
+  variants:
+    - tag: latest
+      containerfile: Containerfile
+      default: true
+    - tag: pkg
+      containerfile: Containerfile.pkg
+    - tag: pkg-latest
+      containerfile: Containerfile.pkg
+      args:
+        BASE_VERSION: "15-latest"
