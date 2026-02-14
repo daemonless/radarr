@@ -1,6 +1,6 @@
 {
   "image": "radarr",
-  "generated": "2026-02-13T22:03:19Z",
+  "generated": "2026-02-14T14:47:52Z",
   "tags": {
     "latest": {
       "arch": "amd64",
@@ -1464,7 +1464,7 @@
       "arch": "amd64",
       "app_version": "5.28.0.10274",
       "source": "pkg",
-      "generated": "2026-02-13T22:01:28Z",
+      "generated": "2026-02-14T14:47:18Z",
       "packages": {
         "freebsd": [
           {
@@ -2090,19 +2090,19 @@
             "version": "6.0.0"
           },
           {
-            "name": "DryIoc.Microsoft.DependencyInjection",
-            "version": "6.2.0"
+            "name": "Radarr.Api.V3",
+            "version": "1.0.0"
           },
           {
-            "name": "Radarr.Mono",
-            "version": "1.0.0"
+            "name": "DryIoc.Microsoft.DependencyInjection",
+            "version": "6.2.0"
           },
           {
             "name": "Mono.Posix.NETStandard",
             "version": "5.20.1.34-servarr20"
           },
           {
-            "name": "Radarr.Host",
+            "name": "Radarr.SignalR",
             "version": "1.0.0"
           }
         ],
