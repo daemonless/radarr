@@ -1,5 +1,6 @@
 icon: ":material-movie:"
 cit:
+  mode: screenshot
   port: 7878
 
 build:
