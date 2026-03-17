@@ -10,7 +10,8 @@ x-daemonless:
   freshports_url: "https://www.freshports.org/net-p2p/radarr/"
   user: "bsd"
   mlock: true
-  
+  appjail:
+
   docs:
     env:
       PUID: "User ID for the application process"
