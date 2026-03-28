@@ -1,12 +1,12 @@
 {
   "image": "radarr",
-  "generated": "2026-03-26T10:08:50Z",
+  "generated": "2026-03-28T14:22:19Z",
   "tags": {
     "latest": {
       "arch": "amd64",
       "app_version": "6.0.4.10291",
       "source": "upstream",
-      "generated": "2026-03-26T10:08:33Z",
+      "generated": "2026-03-28T14:20:56Z",
       "packages": {
         "freebsd": [
           {
@@ -712,24 +712,20 @@
             "version": "1.0.0"
           },
           {
-            "name": "DryIoc.Microsoft.DependencyInjection",
-            "version": "6.2.0"
+            "name": "Radarr.Core",
+            "version": "1.0.0"
           },
           {
             "name": "Radarr.Http",
             "version": "1.0.0"
           },
           {
-            "name": "Radarr.Mono",
-            "version": "1.0.0"
+            "name": "DryIoc.Microsoft.DependencyInjection",
+            "version": "6.2.0"
           },
           {
             "name": "Mono.Posix.NETStandard",
             "version": "5.20.1.34-servarr20"
-          },
-          {
-            "name": "Radarr.Core",
-            "version": "1.0.0"
           },
           {
             "name": "Microsoft.Bcl.TimeProvider",
@@ -826,6 +822,14 @@
           {
             "name": "System.Windows.Extensions",
             "version": "6.0.0"
+          },
+          {
+            "name": "Radarr.Mono",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Radarr.Host",
+            "version": "1.0.0"
           }
         ],
         "go": [],
@@ -838,7 +842,7 @@
       },
       "summary": {
         "freebsd": 57,
-        "dotnet": 147,
+        "dotnet": 148,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -846,14 +850,14 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 204
+        "total": 205
       }
     },
     "pkg-latest": {
       "arch": "amd64",
       "app_version": "6.0.4.10291_1",
       "source": "pkg",
-      "generated": "2026-03-26T10:04:07Z",
+      "generated": "2026-03-28T14:22:06Z",
       "packages": {
         "freebsd": [
           {
@@ -1051,68 +1055,40 @@
         ],
         "dotnet": [
           {
-            "name": "Radarr.Core",
+            "name": "Radarr.Common",
             "version": "1.0.0"
           },
           {
-            "name": "Dapper",
-            "version": "2.1.66"
+            "name": "DryIoc.dll",
+            "version": "5.4.3"
           },
           {
-            "name": "Diacritical.Net",
-            "version": "1.0.4"
-          },
-          {
-            "name": "Equ",
-            "version": "2.3.0"
-          },
-          {
-            "name": "FluentMigrator.Runner.Core",
+            "name": "IPAddressRange",
             "version": "6.2.0"
-          },
-          {
-            "name": "FluentMigrator.Runner.Postgres",
-            "version": "6.2.0"
-          },
-          {
-            "name": "FluentMigrator.Runner.SQLite",
-            "version": "6.2.0"
-          },
-          {
-            "name": "FluentValidation",
-            "version": "9.5.4"
-          },
-          {
-            "name": "MailKit",
-            "version": "4.13.0"
-          },
-          {
-            "name": "Microsoft.AspNetCore.Cryptography.KeyDerivation",
-            "version": "8.0.17"
-          },
-          {
-            "name": "Microsoft.Data.SqlClient",
-            "version": "6.1.1"
-          },
-          {
-            "name": "Microsoft.Extensions.Configuration",
-            "version": "8.0.0"
           },
           {
             "name": "Microsoft.Extensions.DependencyInjection",
             "version": "8.0.1"
           },
           {
-            "name": "Microsoft.Extensions.Logging",
+            "name": "Microsoft.Extensions.Hosting.WindowsServices",
             "version": "8.0.1"
-          },
-          {
-            "name": "MonoTorrent",
-            "version": "3.0.2"
           },
           {
             "name": "NLog",
             "version": "5.4.0"
+          },
+          {
+            "name": "NLog.Extensions.Logging",
+            "version": "5.4.0"
+          },
+          {
+            "name": "NLog.Layouts.ClefJsonLayout",
+            "version": "1.0.3"
+          },
+          {
+            "name": "NLog.Targets.Syslog",
+            "version": "7.0.0"
           },
           {
             "name": "Newtonsoft.Json",
@@ -1123,28 +1099,32 @@
             "version": "9.0.3"
           },
           {
-            "name": "Polly",
-            "version": "8.6.0"
+            "name": "Sentry",
+            "version": "4.0.2"
           },
           {
-            "name": "Servarr.FFMpegCore",
-            "version": "4.7.0-26"
+            "name": "SharpZipLib",
+            "version": "1.4.2"
           },
           {
-            "name": "Servarr.FFprobe",
-            "version": "5.1.4.112"
+            "name": "System.Configuration.ConfigurationManager",
+            "version": "8.0.1"
           },
           {
-            "name": "SixLabors.ImageSharp",
-            "version": "3.1.11"
+            "name": "System.Data.SQLite",
+            "version": "2.0.2"
           },
           {
-            "name": "System.Drawing.Common",
-            "version": "8.0.20"
+            "name": "System.IO.FileSystem.AccessControl",
+            "version": "5.0.0"
           },
           {
-            "name": "System.Text.Encoding.CodePages",
-            "version": "8.0.0"
+            "name": "System.Runtime.Loader",
+            "version": "4.3.0"
+          },
+          {
+            "name": "System.ServiceProcess.ServiceController",
+            "version": "8.0.1"
           },
           {
             "name": "System.Text.Json",
@@ -1163,12 +1143,20 @@
             "version": "2.5.1"
           },
           {
-            "name": "DryIoc.dll",
-            "version": "5.4.3"
+            "name": "Dapper",
+            "version": "2.1.66"
+          },
+          {
+            "name": "Diacritical.Net",
+            "version": "1.0.4"
           },
           {
             "name": "Dynamitey",
             "version": "3.0.3"
+          },
+          {
+            "name": "Equ",
+            "version": "2.3.0"
           },
           {
             "name": "FluentMigrator",
@@ -1183,8 +1171,20 @@
             "version": "6.2.0"
           },
           {
-            "name": "IPAddressRange",
+            "name": "FluentMigrator.Runner.Core",
             "version": "6.2.0"
+          },
+          {
+            "name": "FluentMigrator.Runner.Postgres",
+            "version": "6.2.0"
+          },
+          {
+            "name": "FluentMigrator.Runner.SQLite",
+            "version": "6.2.0"
+          },
+          {
+            "name": "FluentValidation",
+            "version": "9.5.4"
           },
           {
             "name": "Ical.Net",
@@ -1199,7 +1199,15 @@
             "version": "1.6.1"
           },
           {
+            "name": "MailKit",
+            "version": "4.13.0"
+          },
+          {
             "name": "Microsoft.AspNetCore.Cryptography.Internal",
+            "version": "8.0.17"
+          },
+          {
+            "name": "Microsoft.AspNetCore.Cryptography.KeyDerivation",
             "version": "8.0.17"
           },
           {
@@ -1211,12 +1219,20 @@
             "version": "8.0.0"
           },
           {
+            "name": "Microsoft.Data.SqlClient",
+            "version": "6.1.1"
+          },
+          {
             "name": "Microsoft.Extensions.Caching.Abstractions",
             "version": "8.0.0"
           },
           {
             "name": "Microsoft.Extensions.Caching.Memory",
             "version": "8.0.1"
+          },
+          {
+            "name": "Microsoft.Extensions.Configuration",
+            "version": "8.0.0"
           },
           {
             "name": "Microsoft.Extensions.Configuration.Abstractions",
@@ -1279,7 +1295,7 @@
             "version": "8.0.1"
           },
           {
-            "name": "Microsoft.Extensions.Hosting.WindowsServices",
+            "name": "Microsoft.Extensions.Logging",
             "version": "8.0.1"
           },
           {
@@ -1371,20 +1387,16 @@
             "version": "3.0.0"
           },
           {
-            "name": "NLog.Extensions.Logging",
-            "version": "5.4.0"
-          },
-          {
-            "name": "NLog.Layouts.ClefJsonLayout",
-            "version": "1.0.3"
-          },
-          {
-            "name": "NLog.Targets.Syslog",
-            "version": "7.0.0"
+            "name": "MonoTorrent",
+            "version": "3.0.2"
           },
           {
             "name": "NodaTime",
             "version": "3.2.0"
+          },
+          {
+            "name": "Polly",
+            "version": "8.6.0"
           },
           {
             "name": "Polly.Contrib.WaitAndRetry",
@@ -1399,12 +1411,16 @@
             "version": "4.0.0"
           },
           {
-            "name": "Sentry",
-            "version": "4.0.2"
+            "name": "Servarr.FFMpegCore",
+            "version": "4.7.0-26"
           },
           {
-            "name": "SharpZipLib",
-            "version": "1.4.2"
+            "name": "Servarr.FFprobe",
+            "version": "5.1.4.112"
+          },
+          {
+            "name": "SixLabors.ImageSharp",
+            "version": "3.1.11"
           },
           {
             "name": "Swashbuckle.AspNetCore.Annotations",
@@ -1431,14 +1447,6 @@
             "version": "5.0.0"
           },
           {
-            "name": "System.Configuration.ConfigurationManager",
-            "version": "8.0.1"
-          },
-          {
-            "name": "System.Data.SQLite",
-            "version": "2.0.2"
-          },
-          {
             "name": "System.Diagnostics.DiagnosticSource",
             "version": "6.0.1"
           },
@@ -1447,12 +1455,12 @@
             "version": "8.0.1"
           },
           {
-            "name": "System.Formats.Asn1",
-            "version": "8.0.1"
+            "name": "System.Drawing.Common",
+            "version": "8.0.20"
           },
           {
-            "name": "System.IO.FileSystem.AccessControl",
-            "version": "5.0.0"
+            "name": "System.Formats.Asn1",
+            "version": "8.0.1"
           },
           {
             "name": "System.IdentityModel.Tokens.Jwt",
@@ -1465,10 +1473,6 @@
           {
             "name": "System.Runtime.CompilerServices.Unsafe",
             "version": "6.0.0"
-          },
-          {
-            "name": "System.Runtime.Loader",
-            "version": "4.3.0"
           },
           {
             "name": "System.Security.AccessControl",
@@ -1487,8 +1491,8 @@
             "version": "5.0.0"
           },
           {
-            "name": "System.ServiceProcess.ServiceController",
-            "version": "8.0.1"
+            "name": "System.Text.Encoding.CodePages",
+            "version": "8.0.0"
           },
           {
             "name": "runtime.any.System.IO",
@@ -1519,7 +1523,11 @@
             "version": "4.3.0"
           },
           {
-            "name": "Radarr.Common",
+            "name": "Radarr.Core",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Radarr.Host",
             "version": "1.0.0"
           },
           {
@@ -1535,7 +1543,7 @@
             "version": "5.20.1.34-servarr20"
           },
           {
-            "name": "Radarr.Host",
+            "name": "Radarr",
             "version": "1.0.0"
           }
         ],
@@ -1549,7 +1557,7 @@
       },
       "summary": {
         "freebsd": 48,
-        "dotnet": 122,
+        "dotnet": 123,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -1557,14 +1565,14 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 170
+        "total": 171
       }
     },
     "pkg": {
       "arch": "amd64",
       "app_version": "5.28.0.10274",
       "source": "pkg",
-      "generated": "2026-03-26T09:59:36Z",
+      "generated": "2026-03-28T14:20:17Z",
       "packages": {
         "freebsd": [
           {
@@ -1762,20 +1770,8 @@
         ],
         "dotnet": [
           {
-            "name": "Radarr.Http",
+            "name": "Radarr.SignalR",
             "version": "1.0.0"
-          },
-          {
-            "name": "FluentValidation",
-            "version": "9.5.4"
-          },
-          {
-            "name": "ImpromptuInterface",
-            "version": "7.0.1"
-          },
-          {
-            "name": "NLog",
-            "version": "5.4.0"
           },
           {
             "name": "BouncyCastle.Cryptography",
@@ -1802,12 +1798,20 @@
             "version": "2.3.0"
           },
           {
+            "name": "FluentValidation",
+            "version": "9.5.4"
+          },
+          {
             "name": "IPAddressRange",
             "version": "6.2.0"
           },
           {
             "name": "Ical.Net",
             "version": "4.3.1"
+          },
+          {
+            "name": "ImpromptuInterface",
+            "version": "7.0.1"
           },
           {
             "name": "Instances",
@@ -1904,6 +1908,10 @@
           {
             "name": "MonoTorrent",
             "version": "2.0.7"
+          },
+          {
+            "name": "NLog",
+            "version": "5.4.0"
           },
           {
             "name": "NLog.Extensions.Logging",
@@ -2194,7 +2202,7 @@
             "version": "1.0.0"
           },
           {
-            "name": "Radarr.Host",
+            "name": "Radarr.Api.V3",
             "version": "1.0.0"
           },
           {
@@ -2208,10 +2216,6 @@
           {
             "name": "Mono.Posix.NETStandard",
             "version": "5.20.1.34-servarr20"
-          },
-          {
-            "name": "Radarr.SignalR",
-            "version": "1.0.0"
           }
         ],
         "go": [],
@@ -2224,7 +2228,7 @@
       },
       "summary": {
         "freebsd": 48,
-        "dotnet": 113,
+        "dotnet": 112,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -2232,7 +2236,7 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 161
+        "total": 160
       }
     }
   }
