@@ -4,13 +4,13 @@ x-daemonless:
   title: "Radarr"
   icon: ":material-movie:"
   category: "Media Management"
-  description: "Radarr movie management on FreeBSD."
+  description: "Automated movie collection manager that monitors, grabs, and manages your movie library via Usenet and BitTorrent."
   upstream_url: "https://github.com/Radarr/Radarr"
   web_url: "https://radarr.video/"
   freshports_url: "https://www.freshports.org/net-p2p/radarr/"
   user: "bsd"
   mlock: true
-  appjail:
+  appjail: true
 
   docs:
     env:

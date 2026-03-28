@@ -18,7 +18,7 @@ ARG HEALTHCHECK_ENDPOINT="http://localhost:7878/ping"
 ENV HEALTHCHECK_URL="${HEALTHCHECK_ENDPOINT}"
 
 LABEL org.opencontainers.image.title="Radarr" \
-      org.opencontainers.image.description="Radarr movie management on FreeBSD." \
+      org.opencontainers.image.description="Automated movie collection manager that monitors, grabs, and manages your movie library via Usenet and BitTorrent." \
       org.opencontainers.image.source="https://github.com/daemonless/radarr" \
       org.opencontainers.image.url="https://radarr.video/" \
       org.opencontainers.image.documentation="https://wiki.servarr.com/radarr" \
