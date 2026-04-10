@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-07T15:07:03Z",
+  "generated": "2026-04-10T20:35:55Z",
   "image": "radarr",
   "tags": {
     "latest": {
       "app_version": "6.1.1.10360",
       "arch": "amd64",
-      "generated": "2026-04-07T14:56:03Z",
+      "generated": "2026-04-10T20:33:41Z",
       "packages": {
         "dotnet": [
           {
@@ -333,6 +333,10 @@
             "version": "8.6.0"
           },
           {
+            "name": "Radarr.Api.V3",
+            "version": "1.0.0"
+          },
+          {
             "name": "Radarr.Common",
             "version": "1.0.0"
           },
@@ -345,11 +349,11 @@
             "version": "1.0.0"
           },
           {
-            "name": "Radarr.Mono",
+            "name": "Radarr.Http",
             "version": "1.0.0"
           },
           {
-            "name": "Radarr.SignalR",
+            "name": "Radarr.Mono",
             "version": "1.0.0"
           },
           {
@@ -741,7 +745,7 @@
       },
       "source": "upstream",
       "summary": {
-        "dotnet": 123,
+        "dotnet": 124,
         "freebsd": 57,
         "go": 0,
         "java": 0,
@@ -750,13 +754,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 180
+        "total": 181
       }
     },
     "pkg": {
       "app_version": "6.0.4.10291_1",
       "arch": "amd64",
-      "generated": "2026-04-07T14:59:48Z",
+      "generated": "2026-04-10T20:33:43Z",
       "packages": {
         "dotnet": [
           {
@@ -1089,6 +1093,10 @@
           },
           {
             "name": "Radarr.Common",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Radarr.Core",
             "version": "1.0.0"
           },
           {
@@ -1448,7 +1456,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 122,
+        "dotnet": 123,
         "freebsd": 47,
         "go": 0,
         "java": 0,
@@ -1457,13 +1465,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 169
+        "total": 170
       }
     },
     "pkg-latest": {
-      "app_version": "6.0.4.10291_1",
+      "app_version": "6.1.1.10360",
       "arch": "amd64",
-      "generated": "2026-04-07T15:05:51Z",
+      "generated": "2026-04-10T20:34:46Z",
       "packages": {
         "dotnet": [
           {
@@ -1476,7 +1484,7 @@
           },
           {
             "name": "BouncyCastle.Cryptography",
-            "version": "2.5.1"
+            "version": "2.6.2"
           },
           {
             "name": "Dapper",
@@ -1548,7 +1556,7 @@
           },
           {
             "name": "MailKit",
-            "version": "4.13.0"
+            "version": "4.15.1"
           },
           {
             "name": "Microsoft.AspNetCore.Cryptography.Internal",
@@ -1736,7 +1744,7 @@
           },
           {
             "name": "MimeKit",
-            "version": "4.13.0"
+            "version": "4.15.1"
           },
           {
             "name": "Mono.Nat",
@@ -1791,15 +1799,11 @@
             "version": "8.6.0"
           },
           {
+            "name": "Radarr.Api.V3",
+            "version": "1.0.0"
+          },
+          {
             "name": "Radarr.Common",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Radarr.Core",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Radarr.Http",
             "version": "1.0.0"
           },
           {
@@ -1828,7 +1832,7 @@
           },
           {
             "name": "SixLabors.ImageSharp",
-            "version": "3.1.11"
+            "version": "3.1.12"
           },
           {
             "name": "Swashbuckle.AspNetCore.Annotations",
@@ -2126,7 +2130,7 @@
           },
           {
             "name": "radarr",
-            "version": "6.0.4.10291_1"
+            "version": "6.1.1.10360"
           },
           {
             "name": "readline",
@@ -2155,7 +2159,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 122,
+        "dotnet": 121,
         "freebsd": 47,
         "go": 0,
         "java": 0,
@@ -2164,7 +2168,7 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 169
+        "total": 168
       }
     }
   }
