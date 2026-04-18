@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-10T20:35:55Z",
+  "generated": "2026-04-18T00:10:09Z",
   "image": "radarr",
   "tags": {
     "latest": {
       "app_version": "6.1.1.10360",
       "arch": "amd64",
-      "generated": "2026-04-10T20:33:41Z",
+      "generated": "2026-04-18T00:08:18Z",
       "packages": {
         "dotnet": [
           {
@@ -333,10 +333,6 @@
             "version": "8.6.0"
           },
           {
-            "name": "Radarr.Api.V3",
-            "version": "1.0.0"
-          },
-          {
             "name": "Radarr.Common",
             "version": "1.0.0"
           },
@@ -354,6 +350,10 @@
           },
           {
             "name": "Radarr.Mono",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Radarr.SignalR",
             "version": "1.0.0"
           },
           {
@@ -760,7 +760,7 @@
     "pkg": {
       "app_version": "6.0.4.10291_1",
       "arch": "amd64",
-      "generated": "2026-04-10T20:33:43Z",
+      "generated": "2026-04-18T00:08:35Z",
       "packages": {
         "dotnet": [
           {
@@ -1100,11 +1100,11 @@
             "version": "1.0.0"
           },
           {
-            "name": "Radarr.Mono",
+            "name": "Radarr.Http",
             "version": "1.0.0"
           },
           {
-            "name": "Radarr.SignalR",
+            "name": "Radarr.Mono",
             "version": "1.0.0"
           },
           {
@@ -1379,7 +1379,7 @@
           },
           {
             "name": "execline",
-            "version": "2.9.7.0"
+            "version": "2.9.8.1"
           },
           {
             "name": "gettext-runtime",
@@ -1435,11 +1435,11 @@
           },
           {
             "name": "s6",
-            "version": "2.13.2.0"
+            "version": "2.14.0.1"
           },
           {
             "name": "skalibs",
-            "version": "2.14.4.0"
+            "version": "2.14.5.1"
           },
           {
             "name": "sqlite3",
@@ -1471,7 +1471,7 @@
     "pkg-latest": {
       "app_version": "6.1.1.10360",
       "arch": "amd64",
-      "generated": "2026-04-10T20:34:46Z",
+      "generated": "2026-04-18T00:08:57Z",
       "packages": {
         "dotnet": [
           {
@@ -1799,15 +1799,19 @@
             "version": "8.6.0"
           },
           {
-            "name": "Radarr.Api.V3",
-            "version": "1.0.0"
-          },
-          {
             "name": "Radarr.Common",
             "version": "1.0.0"
           },
           {
-            "name": "Radarr.SignalR",
+            "name": "Radarr.Core",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Radarr.Host",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Radarr.Mono",
             "version": "1.0.0"
           },
           {
@@ -2126,7 +2130,7 @@
           },
           {
             "name": "pkg",
-            "version": "2.6.2_1"
+            "version": "2.7.3"
           },
           {
             "name": "radarr",
@@ -2159,7 +2163,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 121,
+        "dotnet": 122,
         "freebsd": 47,
         "go": 0,
         "java": 0,
@@ -2168,7 +2172,7 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 168
+        "total": 169
       }
     }
   }
