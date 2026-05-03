@@ -1,11 +1,11 @@
 {
-  "generated": "2026-05-01T07:18:27Z",
+  "generated": "2026-05-03T09:49:55Z",
   "image": "radarr",
   "tags": {
     "latest": {
       "app_version": "6.1.1.10360",
       "arch": "amd64",
-      "generated": "2026-05-01T07:17:11Z",
+      "generated": "2026-05-03T09:48:08Z",
       "packages": {
         "dotnet": [
           {
@@ -331,10 +331,6 @@
           {
             "name": "Polly.Core",
             "version": "8.6.0"
-          },
-          {
-            "name": "Radarr.Api.V3",
-            "version": "1.0.0"
           },
           {
             "name": "Radarr.Common",
@@ -745,7 +741,7 @@
       },
       "source": "upstream",
       "summary": {
-        "dotnet": 125,
+        "dotnet": 124,
         "freebsd": 56,
         "go": 0,
         "java": 0,
@@ -754,13 +750,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 181
+        "total": 180
       }
     },
     "pkg": {
       "app_version": "6.0.4.10291_1",
       "arch": "amd64",
-      "generated": "2026-05-01T07:16:22Z",
+      "generated": "2026-05-03T09:48:42Z",
       "packages": {
         "dotnet": [
           {
@@ -1096,7 +1092,15 @@
             "version": "1.0.0"
           },
           {
-            "name": "Radarr.Mono",
+            "name": "Radarr.Host",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Radarr.Http",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Radarr.SignalR",
             "version": "1.0.0"
           },
           {
@@ -1448,7 +1452,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 121,
+        "dotnet": 123,
         "freebsd": 47,
         "go": 0,
         "java": 0,
@@ -1457,13 +1461,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 168
+        "total": 170
       }
     },
     "pkg-latest": {
       "app_version": "6.1.1.10360",
       "arch": "amd64",
-      "generated": "2026-05-01T07:16:09Z",
+      "generated": "2026-05-03T09:48:28Z",
       "packages": {
         "dotnet": [
           {
@@ -1791,7 +1795,7 @@
             "version": "8.6.0"
           },
           {
-            "name": "Radarr.Api.V3",
+            "name": "Radarr",
             "version": "1.0.0"
           },
           {
@@ -1803,7 +1807,11 @@
             "version": "1.0.0"
           },
           {
-            "name": "Radarr.SignalR",
+            "name": "Radarr.Http",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Radarr.Mono",
             "version": "1.0.0"
           },
           {
@@ -2122,7 +2130,7 @@
           },
           {
             "name": "pkg",
-            "version": "2.7.4"
+            "version": "2.7.5"
           },
           {
             "name": "radarr",
@@ -2155,7 +2163,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 122,
+        "dotnet": 123,
         "freebsd": 47,
         "go": 0,
         "java": 0,
@@ -2164,7 +2172,7 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 169
+        "total": 170
       }
     }
   }
