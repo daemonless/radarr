@@ -1,11 +1,11 @@
 {
-  "generated": "2026-05-06T23:17:10Z",
+  "generated": "2026-05-06T23:34:23Z",
   "image": "radarr",
   "tags": {
     "latest": {
       "app_version": "6.1.1.10360",
       "arch": "amd64",
-      "generated": "2026-05-06T23:11:42Z",
+      "generated": "2026-05-06T23:32:49Z",
       "packages": {
         "dotnet": [
           {
@@ -333,10 +333,6 @@
             "version": "8.6.0"
           },
           {
-            "name": "Radarr",
-            "version": "1.0.0"
-          },
-          {
             "name": "Radarr.Api.V3",
             "version": "1.0.0"
           },
@@ -346,6 +342,10 @@
           },
           {
             "name": "Radarr.Core",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Radarr.Http",
             "version": "1.0.0"
           },
           {
@@ -752,7 +752,7 @@
     "pkg": {
       "app_version": "6.0.4.10291_1",
       "arch": "amd64",
-      "generated": "2026-05-06T23:06:19Z",
+      "generated": "2026-05-06T23:32:37Z",
       "packages": {
         "dotnet": [
           {
@@ -1080,15 +1080,15 @@
             "version": "8.6.0"
           },
           {
+            "name": "Radarr.Api.V3",
+            "version": "1.0.0"
+          },
+          {
             "name": "Radarr.Common",
             "version": "1.0.0"
           },
           {
             "name": "Radarr.Core",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Radarr.SignalR",
             "version": "1.0.0"
           },
           {
@@ -1455,7 +1455,7 @@
     "pkg-latest": {
       "app_version": "6.1.1.10360",
       "arch": "amd64",
-      "generated": "2026-05-06T23:15:57Z",
+      "generated": "2026-05-06T23:33:08Z",
       "packages": {
         "dotnet": [
           {
@@ -1783,11 +1783,11 @@
             "version": "8.6.0"
           },
           {
-            "name": "Radarr.Common",
+            "name": "Radarr.Api.V3",
             "version": "1.0.0"
           },
           {
-            "name": "Radarr.Core",
+            "name": "Radarr.Common",
             "version": "1.0.0"
           },
           {
