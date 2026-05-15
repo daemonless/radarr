@@ -1,11 +1,11 @@
 {
-  "generated": "2026-05-06T23:34:23Z",
+  "generated": "2026-05-15T23:11:32Z",
   "image": "radarr",
   "tags": {
     "latest": {
       "app_version": "6.1.1.10360",
       "arch": "amd64",
-      "generated": "2026-05-06T23:32:49Z",
+      "generated": "2026-05-15T23:09:18Z",
       "packages": {
         "dotnet": [
           {
@@ -350,6 +350,10 @@
           },
           {
             "name": "Radarr.Mono",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Radarr.SignalR",
             "version": "1.0.0"
           },
           {
@@ -737,7 +741,7 @@
       },
       "source": "upstream",
       "summary": {
-        "dotnet": 123,
+        "dotnet": 124,
         "freebsd": 56,
         "go": 0,
         "java": 0,
@@ -746,13 +750,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 179
+        "total": 180
       }
     },
     "pkg": {
       "app_version": "6.0.4.10291_1",
       "arch": "amd64",
-      "generated": "2026-05-06T23:32:37Z",
+      "generated": "2026-05-15T23:10:21Z",
       "packages": {
         "dotnet": [
           {
@@ -1080,15 +1084,23 @@
             "version": "8.6.0"
           },
           {
-            "name": "Radarr.Api.V3",
-            "version": "1.0.0"
-          },
-          {
             "name": "Radarr.Common",
             "version": "1.0.0"
           },
           {
             "name": "Radarr.Core",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Radarr.Http",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Radarr.Mono",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Radarr.SignalR",
             "version": "1.0.0"
           },
           {
@@ -1440,7 +1452,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 121,
+        "dotnet": 123,
         "freebsd": 47,
         "go": 0,
         "java": 0,
@@ -1449,13 +1461,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 168
+        "total": 170
       }
     },
     "pkg-latest": {
       "app_version": "6.1.1.10360",
       "arch": "amd64",
-      "generated": "2026-05-06T23:33:08Z",
+      "generated": "2026-05-15T23:09:16Z",
       "packages": {
         "dotnet": [
           {
@@ -1791,7 +1803,7 @@
             "version": "1.0.0"
           },
           {
-            "name": "Radarr.Http",
+            "name": "Radarr.Core",
             "version": "1.0.0"
           },
           {
@@ -2078,7 +2090,7 @@
           },
           {
             "name": "gettext-runtime",
-            "version": "1.0"
+            "version": "1.0_1"
           },
           {
             "name": "icu",
