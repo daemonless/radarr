@@ -1,20 +1,20 @@
 {
-  "generated": "2026-06-05T10:20:40Z",
+  "generated": "2026-06-10T13:49:20Z",
   "image": "radarr",
   "tags": {
     "latest": {
-      "app_version": "6.1.1.10360",
+      "app_version": "6.2.1.10461",
       "arch": "amd64",
-      "generated": "2026-06-05T10:19:25Z",
+      "generated": "2026-06-10T13:46:32Z",
       "packages": {
         "dotnet": [
           {
             "name": "Azure.Core",
-            "version": "1.47.1"
+            "version": "1.50.0"
           },
           {
             "name": "Azure.Identity",
-            "version": "1.14.2"
+            "version": "1.17.1"
           },
           {
             "name": "BouncyCastle.Cryptography",
@@ -22,7 +22,7 @@
           },
           {
             "name": "Dapper",
-            "version": "2.1.66"
+            "version": "2.1.79"
           },
           {
             "name": "Diacritical.Net",
@@ -74,7 +74,7 @@
           },
           {
             "name": "IPAddressRange",
-            "version": "6.2.0"
+            "version": "6.3.0"
           },
           {
             "name": "Ical.Net",
@@ -90,15 +90,15 @@
           },
           {
             "name": "MailKit",
-            "version": "4.15.1"
+            "version": "4.16.0"
           },
           {
             "name": "Microsoft.AspNetCore.Cryptography.Internal",
-            "version": "8.0.17"
+            "version": "8.0.27"
           },
           {
             "name": "Microsoft.AspNetCore.Cryptography.KeyDerivation",
-            "version": "8.0.17"
+            "version": "8.0.27"
           },
           {
             "name": "Microsoft.Bcl.AsyncInterfaces",
@@ -110,7 +110,7 @@
           },
           {
             "name": "Microsoft.Data.SqlClient",
-            "version": "6.1.1"
+            "version": "6.1.5"
           },
           {
             "name": "Microsoft.Extensions.Caching.Abstractions",
@@ -234,15 +234,15 @@
           },
           {
             "name": "Microsoft.Identity.Client",
-            "version": "4.73.1"
+            "version": "4.80.0"
           },
           {
             "name": "Microsoft.Identity.Client.Extensions.Msal",
-            "version": "4.73.1"
+            "version": "4.78.0"
           },
           {
             "name": "Microsoft.IdentityModel.Abstractions",
-            "version": "7.7.1"
+            "version": "8.14.0"
           },
           {
             "name": "Microsoft.IdentityModel.JsonWebTokens",
@@ -278,7 +278,7 @@
           },
           {
             "name": "MimeKit",
-            "version": "4.15.1"
+            "version": "4.16.0"
           },
           {
             "name": "Mono.Nat",
@@ -294,15 +294,15 @@
           },
           {
             "name": "NLog",
-            "version": "5.4.0"
+            "version": "5.5.1"
           },
           {
             "name": "NLog.Extensions.Logging",
-            "version": "5.4.0"
+            "version": "5.5.0"
           },
           {
             "name": "NLog.Layouts.ClefJsonLayout",
-            "version": "1.0.3"
+            "version": "1.0.5"
           },
           {
             "name": "NLog.Targets.Syslog",
@@ -310,7 +310,7 @@
           },
           {
             "name": "Newtonsoft.Json",
-            "version": "13.0.3"
+            "version": "13.0.4"
           },
           {
             "name": "NodaTime",
@@ -318,11 +318,11 @@
           },
           {
             "name": "Npgsql",
-            "version": "9.0.3"
+            "version": "9.0.5"
           },
           {
             "name": "Polly",
-            "version": "8.6.0"
+            "version": "8.6.6"
           },
           {
             "name": "Polly.Contrib.WaitAndRetry",
@@ -330,7 +330,11 @@
           },
           {
             "name": "Polly.Core",
-            "version": "8.6.0"
+            "version": "8.6.6"
+          },
+          {
+            "name": "Radarr",
+            "version": "1.0.0"
           },
           {
             "name": "Radarr.Api.V3",
@@ -345,7 +349,7 @@
             "version": "1.0.0"
           },
           {
-            "name": "Radarr.Host",
+            "name": "Radarr.Http",
             "version": "1.0.0"
           },
           {
@@ -394,7 +398,7 @@
           },
           {
             "name": "System.ClientModel",
-            "version": "1.5.1"
+            "version": "1.8.0"
           },
           {
             "name": "System.ComponentModel",
@@ -410,11 +414,11 @@
           },
           {
             "name": "System.Data.SQLite",
-            "version": "2.0.2"
+            "version": "2.0.3"
           },
           {
             "name": "System.Diagnostics.DiagnosticSource",
-            "version": "6.0.1"
+            "version": "8.0.1"
           },
           {
             "name": "System.Diagnostics.EventLog",
@@ -422,7 +426,7 @@
           },
           {
             "name": "System.Drawing.Common",
-            "version": "8.0.20"
+            "version": "8.0.27"
           },
           {
             "name": "System.Formats.Asn1",
@@ -474,7 +478,7 @@
           },
           {
             "name": "System.Text.Json",
-            "version": "8.0.5"
+            "version": "8.0.6"
           },
           {
             "name": "runtime.any.System.IO",
@@ -741,7 +745,7 @@
       },
       "source": "upstream",
       "summary": {
-        "dotnet": 124,
+        "dotnet": 125,
         "freebsd": 56,
         "go": 0,
         "java": 0,
@@ -750,13 +754,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 180
+        "total": 181
       }
     },
     "pkg": {
       "app_version": "6.0.4.10291_1",
       "arch": "amd64",
-      "generated": "2026-06-05T10:18:34Z",
+      "generated": "2026-06-10T13:46:26Z",
       "packages": {
         "dotnet": [
           {
@@ -1084,15 +1088,19 @@
             "version": "8.6.0"
           },
           {
-            "name": "Radarr.Api.V3",
-            "version": "1.0.0"
-          },
-          {
             "name": "Radarr.Common",
             "version": "1.0.0"
           },
           {
             "name": "Radarr.Core",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Radarr.Host",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Radarr.Http",
             "version": "1.0.0"
           },
           {
@@ -1387,7 +1395,7 @@
           },
           {
             "name": "krb5",
-            "version": "1.22.1"
+            "version": "1.22.2_2"
           },
           {
             "name": "libedit",
@@ -1444,7 +1452,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 121,
+        "dotnet": 122,
         "freebsd": 47,
         "go": 0,
         "java": 0,
@@ -1453,13 +1461,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 168
+        "total": 169
       }
     },
     "pkg-latest": {
       "app_version": "6.1.1.10360",
       "arch": "amd64",
-      "generated": "2026-06-05T10:19:07Z",
+      "generated": "2026-06-10T13:48:03Z",
       "packages": {
         "dotnet": [
           {
@@ -1795,11 +1803,7 @@
             "version": "1.0.0"
           },
           {
-            "name": "Radarr.Http",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Radarr.Mono",
+            "name": "Radarr.Core",
             "version": "1.0.0"
           },
           {
@@ -2098,11 +2102,11 @@
           },
           {
             "name": "krb5",
-            "version": "1.22.2"
+            "version": "1.22.2_2"
           },
           {
             "name": "libedit",
-            "version": "3.1.20251016_1,1"
+            "version": "3.1.20260512,1"
           },
           {
             "name": "libiconv",
@@ -2155,7 +2159,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 123,
+        "dotnet": 122,
         "freebsd": 47,
         "go": 0,
         "java": 0,
@@ -2164,7 +2168,7 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 170
+        "total": 169
       }
     }
   }
