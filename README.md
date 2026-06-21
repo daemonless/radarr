@@ -76,6 +76,7 @@ services:
     name: radarr
     options:
       - container: 'boot args:--pull'
+      - expose="7878:7878 proto:tcp" \
     oci:
       user: root
       environment:
@@ -104,6 +105,7 @@ OPTION overwrite=force
 OPTION from=ghcr.io/daemonless/radarr:${tag}
 SET allow.mlock=1
 ```
+**Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
 
 ### Podman CLI
 
@@ -119,6 +121,25 @@ podman run -d --name radarr \
   -v /path/to/downloads:/downloads # optional \
   ghcr.io/daemonless/radarr:latest
 ```
+
+### AppJail
+
+```bash
+appjail oci run -Pd \
+  -o overwrite=force \
+  -o container="args:--pull" \
+  -o virtualnet=":<random> default" \
+  -o nat \
+  -o expose="7878:7878 proto:tcp" \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ=UTC \
+  -o fstab="/path/to/containers/radarr /config <pseudofs>" \
+  -o fstab="/path/to/movies /movies <pseudofs>" \ # optional
+  -o fstab="/path/to/downloads /downloads <pseudofs>" \ # optional
+  ghcr.io/daemonless/radarr:latest radarr
+```
+**Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
 
 ### Ansible
 
