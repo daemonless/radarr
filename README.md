@@ -7,9 +7,9 @@ Source: dbuild templates
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/daemonless/radarr/build.yaml?style=flat-square&label=Build&color=green)](https://github.com/daemonless/radarr/actions)
 [![Last Commit](https://img.shields.io/github/last-commit/daemonless/radarr?style=flat-square&label=Last+Commit&color=blue)](https://github.com/daemonless/radarr/commits)
+[![mlock Required](https://img.shields.io/badge/mlock-required-orange?style=flat-square&logo=freebsd&logoColor=white)](https://daemonless.io/guides/ocijail-patch/)
 
 Automated movie collection manager that monitors, grabs, and manages your movie library via Usenet and BitTorrent.
-
 
 | | |
 |---|---|
@@ -37,18 +37,18 @@ Before deploying, ensure your host environment is ready. See the [Quick Start Gu
 ```yaml
 services:
   radarr:
-    image: ghcr.io/daemonless/radarr:latest
+    image: "ghcr.io/daemonless/radarr:latest"
     container_name: radarr
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=UTC
+      - PUID=1000  # User ID for the application process
+      - PGID=1000  # Group ID for the application process
+      - TZ=UTC  # Timezone for the container
     volumes:
       - "/path/to/containers/radarr:/config"
       - "/path/to/movies:/movies" # optional
       - "/path/to/downloads:/downloads" # optional
     ports:
-      - 7878:7878
+      - "7878:7878"
     annotations:
       org.freebsd.jail.allow.mlock: "true"
     restart: unless-stopped
@@ -126,7 +126,7 @@ podman run -d --name radarr \
 - name: Deploy radarr
   containers.podman.podman_container:
     name: radarr
-    image: ghcr.io/daemonless/radarr:latest
+    image: "ghcr.io/daemonless/radarr:latest"
     state: started
     restart_policy: always
     env:
