@@ -8,6 +8,11 @@ build:
     - tag: latest
       containerfile: Containerfile
       default: true
+    - tag: nightly
+      containerfile: Containerfile
+      args:
+        RADARR_BRANCH: nightly
+      tag_desc: "**Nightly branch** — bleeding-edge pre-release build. One-way DB migrations; back up /config before switching back to release."
     - tag: pkg
       containerfile: Containerfile.pkg
     - tag: pkg-latest
