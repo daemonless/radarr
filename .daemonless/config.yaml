@@ -8,6 +8,11 @@ build:
     - tag: latest
       containerfile: Containerfile
       default: true
+    - tag: develop
+      containerfile: Containerfile
+      args:
+        RADARR_BRANCH: develop
+      tag_desc: "**Develop branch** — pre-release/beta channel, more tested than nightly. One-way DB migrations; back up /config before switching back to release."
     - tag: nightly
       containerfile: Containerfile
       args:

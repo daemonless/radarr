@@ -11,6 +11,9 @@ Source: dbuild templates
 
 Automated movie collection manager that monitors, grabs, and manages your movie library via Usenet and BitTorrent.
 
+> [!WARNING]
+> **Requires ocijail ≥ 0.6.0 (annotation support).** This image needs the jail permission **allow.mlock**, applied via OCI annotations. FreeBSD **quarterly ships ocijail 0.4.0, which has no annotation support** — the container starts but the permission is silently dropped, so the app can crash or misbehave at runtime. Point your pkg repos at the `latest` branch (ocijail ≥ 0.6.0), then run with the annotation flag below. See the [ocijail guide](https://daemonless.io/guides/ocijail-patch/).
+
 | | |
 |---|---|
 | **Port** | 7878 |
@@ -22,6 +25,7 @@ Automated movie collection manager that monitors, grabs, and manages your movie 
 | Tag | Description | Best For |
 | :--- | :--- | :--- |
 | `latest` | **Upstream Binary**. Built from official release. | Most users. Matches Linux Docker behavior. |
+| `develop` | **Develop branch** — pre-release/beta channel, more tested than nightly. One-way DB migrations; back up /config before switching back to release. | Alternative build. |
 | `nightly` | **Nightly branch** — bleeding-edge pre-release build. One-way DB migrations; back up /config before switching back to release. | Alternative build. |
 | `pkg` | **FreeBSD Quarterly**. Uses stable, tested packages. | Production stability. |
 | `pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
