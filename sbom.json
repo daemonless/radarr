@@ -1,11 +1,11 @@
 {
-  "generated": "2026-07-12T20:41:15Z",
+  "generated": "2026-07-18T09:36:52Z",
   "image": "radarr",
   "tags": {
     "develop": {
       "app_version": "6.3.0.10514",
       "arch": "amd64",
-      "generated": "2026-07-12T20:31:12Z",
+      "generated": "2026-07-18T09:35:40Z",
       "packages": {
         "dotnet": [
           {
@@ -345,10 +345,6 @@
             "version": "1.0.0"
           },
           {
-            "name": "Radarr.Host",
-            "version": "1.0.0"
-          },
-          {
             "name": "Radarr.Http",
             "version": "1.0.0"
           },
@@ -660,7 +656,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.124"
+            "version": "3.125"
           },
           {
             "name": "compat13x-amd64",
@@ -676,7 +672,7 @@
           },
           {
             "name": "gettext-runtime",
-            "version": "1.0"
+            "version": "1.0_1"
           },
           {
             "name": "icu",
@@ -688,15 +684,15 @@
           },
           {
             "name": "jq",
-            "version": "1.8.1"
+            "version": "1.8.2"
           },
           {
             "name": "krb5",
-            "version": "1.22.2_2"
+            "version": "1.22.2_3"
           },
           {
             "name": "libedit",
-            "version": "3.1.20251016_1,1"
+            "version": "3.1.20260512,1"
           },
           {
             "name": "libiconv",
@@ -740,7 +736,7 @@
           },
           {
             "name": "sqlite3",
-            "version": "3.50.4_2,1"
+            "version": "3.53.3,1"
           }
         ],
         "go": [],
@@ -753,7 +749,7 @@
       },
       "source": "upstream",
       "summary": {
-        "dotnet": 125,
+        "dotnet": 124,
         "freebsd": 58,
         "go": 0,
         "java": 0,
@@ -762,13 +758,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 183
+        "total": 182
       }
     },
     "latest": {
       "app_version": "6.3.0.10514",
       "arch": "amd64",
-      "generated": "2026-07-12T20:30:59Z",
+      "generated": "2026-07-18T09:34:18Z",
       "packages": {
         "dotnet": [
           {
@@ -1096,6 +1092,10 @@
             "version": "8.6.6"
           },
           {
+            "name": "Radarr",
+            "version": "1.0.0"
+          },
+          {
             "name": "Radarr.Api.V3",
             "version": "1.0.0"
           },
@@ -1109,10 +1109,6 @@
           },
           {
             "name": "Radarr.Host",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Radarr.Http",
             "version": "1.0.0"
           },
           {
@@ -1423,7 +1419,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.124"
+            "version": "3.125"
           },
           {
             "name": "compat13x-amd64",
@@ -1439,7 +1435,7 @@
           },
           {
             "name": "gettext-runtime",
-            "version": "1.0"
+            "version": "1.0_1"
           },
           {
             "name": "icu",
@@ -1451,15 +1447,15 @@
           },
           {
             "name": "jq",
-            "version": "1.8.1"
+            "version": "1.8.2"
           },
           {
             "name": "krb5",
-            "version": "1.22.2_2"
+            "version": "1.22.2_3"
           },
           {
             "name": "libedit",
-            "version": "3.1.20251016_1,1"
+            "version": "3.1.20260512,1"
           },
           {
             "name": "libiconv",
@@ -1503,7 +1499,7 @@
           },
           {
             "name": "sqlite3",
-            "version": "3.50.4_2,1"
+            "version": "3.53.3,1"
           }
         ],
         "go": [],
@@ -1529,9 +1525,9 @@
       }
     },
     "nightly": {
-      "app_version": "6.3.0.10513",
+      "app_version": "6.3.0.10518",
       "arch": "amd64",
-      "generated": "2026-07-12T20:24:17Z",
+      "generated": "2026-07-18T09:33:27Z",
       "packages": {
         "dotnet": [
           {
@@ -1871,7 +1867,7 @@
             "version": "1.0.0"
           },
           {
-            "name": "Radarr.Http",
+            "name": "Radarr.Host",
             "version": "1.0.0"
           },
           {
@@ -2182,7 +2178,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.124"
+            "version": "3.125"
           },
           {
             "name": "compat13x-amd64",
@@ -2198,7 +2194,7 @@
           },
           {
             "name": "gettext-runtime",
-            "version": "1.0"
+            "version": "1.0_1"
           },
           {
             "name": "icu",
@@ -2210,15 +2206,15 @@
           },
           {
             "name": "jq",
-            "version": "1.8.1"
+            "version": "1.8.2"
           },
           {
             "name": "krb5",
-            "version": "1.22.2_2"
+            "version": "1.22.2_3"
           },
           {
             "name": "libedit",
-            "version": "3.1.20251016_1,1"
+            "version": "3.1.20260512,1"
           },
           {
             "name": "libiconv",
@@ -2262,7 +2258,7 @@
           },
           {
             "name": "sqlite3",
-            "version": "3.50.4_2,1"
+            "version": "3.53.3,1"
           }
         ],
         "go": [],
@@ -2290,7 +2286,7 @@
     "pkg": {
       "app_version": "6.1.1.10360",
       "arch": "amd64",
-      "generated": "2026-07-12T20:27:33Z",
+      "generated": "2026-07-18T09:34:13Z",
       "packages": {
         "dotnet": [
           {
@@ -2618,23 +2614,11 @@
             "version": "8.6.0"
           },
           {
-            "name": "Radarr.Api.V3",
-            "version": "1.0.0"
-          },
-          {
             "name": "Radarr.Common",
             "version": "1.0.0"
           },
           {
             "name": "Radarr.Core",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Radarr.Host",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Radarr.Http",
             "version": "1.0.0"
           },
           {
@@ -2921,7 +2905,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.124"
+            "version": "3.125"
           },
           {
             "name": "execline",
@@ -2941,7 +2925,7 @@
           },
           {
             "name": "jq",
-            "version": "1.8.1"
+            "version": "1.8.2"
           },
           {
             "name": "krb5",
@@ -3002,7 +2986,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 125,
+        "dotnet": 122,
         "freebsd": 49,
         "go": 0,
         "java": 0,
@@ -3011,13 +2995,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 174
+        "total": 171
       }
     },
     "pkg-latest": {
       "app_version": "6.1.1.10360",
       "arch": "amd64",
-      "generated": "2026-07-12T20:29:48Z",
+      "generated": "2026-07-18T09:34:24Z",
       "packages": {
         "dotnet": [
           {
@@ -3345,10 +3329,6 @@
             "version": "8.6.0"
           },
           {
-            "name": "Radarr.Api.V3",
-            "version": "1.0.0"
-          },
-          {
             "name": "Radarr.Common",
             "version": "1.0.0"
           },
@@ -3357,7 +3337,7 @@
             "version": "1.0.0"
           },
           {
-            "name": "Radarr.Mono",
+            "name": "Radarr.Http",
             "version": "1.0.0"
           },
           {
@@ -3632,7 +3612,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.124"
+            "version": "3.125"
           },
           {
             "name": "execline",
@@ -3713,7 +3693,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 123,
+        "dotnet": 122,
         "freebsd": 47,
         "go": 0,
         "java": 0,
@@ -3722,7 +3702,7 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 170
+        "total": 169
       }
     }
   }
