@@ -1,11 +1,11 @@
 {
-  "generated": "2026-07-18T09:36:52Z",
+  "generated": "2026-07-28T20:18:58Z",
   "image": "radarr",
   "tags": {
     "develop": {
-      "app_version": "6.3.0.10514",
+      "app_version": "6.4.0.10523",
       "arch": "amd64",
-      "generated": "2026-07-18T09:35:40Z",
+      "generated": "2026-07-28T20:17:39Z",
       "packages": {
         "dotnet": [
           {
@@ -579,6 +579,10 @@
             "version": "15.1"
           },
           {
+            "name": "FreeBSD-locales",
+            "version": "15.1"
+          },
+          {
             "name": "FreeBSD-mtree",
             "version": "15.1"
           },
@@ -750,7 +754,7 @@
       "source": "upstream",
       "summary": {
         "dotnet": 124,
-        "freebsd": 58,
+        "freebsd": 59,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -758,13 +762,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 182
+        "total": 183
       }
     },
     "latest": {
       "app_version": "6.3.0.10514",
       "arch": "amd64",
-      "generated": "2026-07-18T09:34:18Z",
+      "generated": "2026-07-28T20:17:20Z",
       "packages": {
         "dotnet": [
           {
@@ -1108,15 +1112,7 @@
             "version": "1.0.0"
           },
           {
-            "name": "Radarr.Host",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Radarr.Mono",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Radarr.SignalR",
+            "name": "Radarr.Http",
             "version": "1.0.0"
           },
           {
@@ -1342,6 +1338,10 @@
             "version": "15.1"
           },
           {
+            "name": "FreeBSD-locales",
+            "version": "15.1"
+          },
+          {
             "name": "FreeBSD-mtree",
             "version": "15.1"
           },
@@ -1512,8 +1512,8 @@
       },
       "source": "upstream",
       "summary": {
-        "dotnet": 125,
-        "freebsd": 58,
+        "dotnet": 123,
+        "freebsd": 59,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -1521,13 +1521,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 183
+        "total": 182
       }
     },
     "nightly": {
-      "app_version": "6.3.0.10518",
+      "app_version": "6.4.1.10545",
       "arch": "amd64",
-      "generated": "2026-07-18T09:33:27Z",
+      "generated": "2026-07-28T20:17:34Z",
       "packages": {
         "dotnet": [
           {
@@ -1855,6 +1855,10 @@
             "version": "8.6.6"
           },
           {
+            "name": "Radarr",
+            "version": "1.0.0"
+          },
+          {
             "name": "Radarr.Api.V3",
             "version": "1.0.0"
           },
@@ -1864,10 +1868,6 @@
           },
           {
             "name": "Radarr.Core",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Radarr.Host",
             "version": "1.0.0"
           },
           {
@@ -2101,6 +2101,10 @@
             "version": "15.1"
           },
           {
+            "name": "FreeBSD-locales",
+            "version": "15.1"
+          },
+          {
             "name": "FreeBSD-mtree",
             "version": "15.1"
           },
@@ -2272,7 +2276,7 @@
       "source": "upstream",
       "summary": {
         "dotnet": 124,
-        "freebsd": 58,
+        "freebsd": 59,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -2280,13 +2284,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 182
+        "total": 183
       }
     },
     "pkg": {
       "app_version": "6.1.1.10360",
       "arch": "amd64",
-      "generated": "2026-07-18T09:34:13Z",
+      "generated": "2026-07-28T20:16:13Z",
       "packages": {
         "dotnet": [
           {
@@ -2614,6 +2618,10 @@
             "version": "8.6.0"
           },
           {
+            "name": "Radarr.Api.V3",
+            "version": "1.0.0"
+          },
+          {
             "name": "Radarr.Common",
             "version": "1.0.0"
           },
@@ -2622,7 +2630,7 @@
             "version": "1.0.0"
           },
           {
-            "name": "Radarr.Mono",
+            "name": "Radarr.Http",
             "version": "1.0.0"
           },
           {
@@ -2840,6 +2848,10 @@
             "version": "15.1"
           },
           {
+            "name": "FreeBSD-locales",
+            "version": "15.1"
+          },
+          {
             "name": "FreeBSD-mtree",
             "version": "15.1"
           },
@@ -2986,8 +2998,8 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 122,
-        "freebsd": 49,
+        "dotnet": 123,
+        "freebsd": 50,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -2995,13 +3007,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 171
+        "total": 173
       }
     },
     "pkg-latest": {
       "app_version": "6.1.1.10360",
       "arch": "amd64",
-      "generated": "2026-07-18T09:34:24Z",
+      "generated": "2026-07-28T20:17:26Z",
       "packages": {
         "dotnet": [
           {
@@ -3341,6 +3353,10 @@
             "version": "1.0.0"
           },
           {
+            "name": "Radarr.Mono",
+            "version": "1.0.0"
+          },
+          {
             "name": "Radarr.SignalR",
             "version": "1.0.0"
           },
@@ -3555,6 +3571,10 @@
             "version": "15.0"
           },
           {
+            "name": "FreeBSD-locales",
+            "version": "15.0"
+          },
+          {
             "name": "FreeBSD-mtree",
             "version": "15.0"
           },
@@ -3660,7 +3680,7 @@
           },
           {
             "name": "pkg",
-            "version": "2.7.5"
+            "version": "2.8.1_1"
           },
           {
             "name": "radarr",
@@ -3693,8 +3713,8 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 122,
-        "freebsd": 47,
+        "dotnet": 123,
+        "freebsd": 48,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -3702,7 +3722,7 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 169
+        "total": 171
       }
     }
   }
