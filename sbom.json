@@ -1,11 +1,11 @@
 {
-  "generated": "2026-08-01T14:23:22Z",
+  "generated": "2026-08-06T07:30:26Z",
   "image": "radarr",
   "tags": {
     "develop": {
-      "app_version": "6.4.0.10523",
+      "app_version": "6.4.1.10545",
       "arch": "amd64",
-      "generated": "2026-08-01T14:14:34Z",
+      "generated": "2026-08-06T07:27:39Z",
       "packages": {
         "dotnet": [
           {
@@ -112,6 +112,11 @@
             "name": "MailKit",
             "purl": "",
             "version": "4.16.0"
+          },
+          {
+            "name": "Microsoft.AspNetCore.App.Runtime.freebsd-x64",
+            "purl": "",
+            "version": "8.0.27"
           },
           {
             "name": "Microsoft.AspNetCore.Cryptography.Internal",
@@ -329,6 +334,11 @@
             "version": "7.7.1"
           },
           {
+            "name": "Microsoft.NETCore.App.Runtime.freebsd-x64",
+            "purl": "",
+            "version": "8.0.27"
+          },
+          {
             "name": "Microsoft.OpenApi",
             "purl": "",
             "version": "1.6.23"
@@ -414,9 +424,1069 @@
             "version": "8.6.6"
           },
           {
-            "name": "Radarr",
+            "name": "Radarr.Common",
             "purl": "",
             "version": "1.0.0"
+          },
+          {
+            "name": "Radarr.Core",
+            "purl": "",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Radarr.Http",
+            "purl": "",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Radarr.SignalR",
+            "purl": "",
+            "version": "1.0.0"
+          },
+          {
+            "name": "ReusableTasks",
+            "purl": "",
+            "version": "4.0.0"
+          },
+          {
+            "name": "Sentry",
+            "purl": "",
+            "version": "4.0.2"
+          },
+          {
+            "name": "Servarr.FFMpegCore",
+            "purl": "",
+            "version": "4.7.0-26"
+          },
+          {
+            "name": "Servarr.FFprobe",
+            "purl": "",
+            "version": "5.1.10.124"
+          },
+          {
+            "name": "SharpZipLib",
+            "purl": "",
+            "version": "1.4.2"
+          },
+          {
+            "name": "SixLabors.ImageSharp",
+            "purl": "",
+            "version": "3.1.12"
+          },
+          {
+            "name": "Swashbuckle.AspNetCore.Annotations",
+            "purl": "",
+            "version": "8.1.4"
+          },
+          {
+            "name": "Swashbuckle.AspNetCore.Swagger",
+            "purl": "",
+            "version": "8.1.4"
+          },
+          {
+            "name": "Swashbuckle.AspNetCore.SwaggerGen",
+            "purl": "",
+            "version": "8.1.4"
+          },
+          {
+            "name": "System.ClientModel",
+            "purl": "",
+            "version": "1.8.0"
+          },
+          {
+            "name": "System.ComponentModel",
+            "purl": "",
+            "version": "4.3.0"
+          },
+          {
+            "name": "System.ComponentModel.Annotations",
+            "purl": "",
+            "version": "5.0.0"
+          },
+          {
+            "name": "System.Configuration.ConfigurationManager",
+            "purl": "",
+            "version": "8.0.1"
+          },
+          {
+            "name": "System.Data.SQLite",
+            "purl": "",
+            "version": "2.0.3"
+          },
+          {
+            "name": "System.Diagnostics.DiagnosticSource",
+            "purl": "",
+            "version": "8.0.1"
+          },
+          {
+            "name": "System.Diagnostics.EventLog",
+            "purl": "",
+            "version": "8.0.1"
+          },
+          {
+            "name": "System.Drawing.Common",
+            "purl": "",
+            "version": "8.0.27"
+          },
+          {
+            "name": "System.Formats.Asn1",
+            "purl": "",
+            "version": "8.0.1"
+          },
+          {
+            "name": "System.IO.FileSystem.AccessControl",
+            "purl": "",
+            "version": "5.0.0"
+          },
+          {
+            "name": "System.IdentityModel.Tokens.Jwt",
+            "purl": "",
+            "version": "7.7.1"
+          },
+          {
+            "name": "System.Memory.Data",
+            "purl": "",
+            "version": "8.0.1"
+          },
+          {
+            "name": "System.Runtime.CompilerServices.Unsafe",
+            "purl": "",
+            "version": "6.0.0"
+          },
+          {
+            "name": "System.Runtime.Loader",
+            "purl": "",
+            "version": "4.3.0"
+          },
+          {
+            "name": "System.Security.AccessControl",
+            "purl": "",
+            "version": "5.0.0"
+          },
+          {
+            "name": "System.Security.Cryptography.Pkcs",
+            "purl": "",
+            "version": "8.0.1"
+          },
+          {
+            "name": "System.Security.Cryptography.ProtectedData",
+            "purl": "",
+            "version": "8.0.0"
+          },
+          {
+            "name": "System.Security.Principal.Windows",
+            "purl": "",
+            "version": "5.0.0"
+          },
+          {
+            "name": "System.ServiceProcess.ServiceController",
+            "purl": "",
+            "version": "8.0.1"
+          },
+          {
+            "name": "System.Text.Encoding.CodePages",
+            "purl": "",
+            "version": "8.0.0"
+          },
+          {
+            "name": "System.Text.Json",
+            "purl": "",
+            "version": "8.0.6"
+          },
+          {
+            "name": "runtime.any.System.IO",
+            "purl": "",
+            "version": "4.3.0"
+          },
+          {
+            "name": "runtime.any.System.Reflection",
+            "purl": "",
+            "version": "4.3.0"
+          },
+          {
+            "name": "runtime.any.System.Reflection.Primitives",
+            "purl": "",
+            "version": "4.3.0"
+          },
+          {
+            "name": "runtime.any.System.Runtime",
+            "purl": "",
+            "version": "4.3.0"
+          },
+          {
+            "name": "runtime.any.System.Text.Encoding",
+            "purl": "",
+            "version": "4.3.0"
+          },
+          {
+            "name": "runtime.any.System.Threading.Tasks",
+            "purl": "",
+            "version": "4.3.0"
+          },
+          {
+            "name": "runtime.unix.System.Private.Uri",
+            "purl": "",
+            "version": "4.3.0"
+          }
+        ],
+        "freebsd": [
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-audit-lib",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-blocklist",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-bzip2-lib",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-certctl",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-clibs",
+            "version": "15.1p2"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-clibs-lib32",
+            "version": "15.1p2"
+          },
+          {
+            "licenses": [
+              "CDDL-1.0"
+            ],
+            "name": "FreeBSD-ctf-lib",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-fetch",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-kerberos-lib",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-libarchive",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-libbsdstat",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-libcasper",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-libexecinfo",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-libldns",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-libmagic",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-libsqlite3",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-libsqlite3-lib32",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-libucl",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-locales",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-mtree",
+            "version": "15.1p2"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-ncurses",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-ncurses-lib",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-ncurses-lib32",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-openssl",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-openssl-lib",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-pam-lib",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-pkg-bootstrap",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-rc",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-runtime",
+            "version": "15.1p2"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-runtime-lib32",
+            "version": "15.1p1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-tcpd",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-ufs-lib",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-utilities",
+            "version": "15.1p2"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-xz-lib",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "CDDL-1.0"
+            ],
+            "name": "FreeBSD-zfs-lib",
+            "version": "15.1p1"
+          },
+          {
+            "licenses": [
+              "Zlib"
+            ],
+            "name": "FreeBSD-zlib",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "PD"
+            ],
+            "name": "FreeBSD-zoneinfo",
+            "version": "15.1p2"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "FreeBSD-zstd-lib",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "MPL20"
+            ],
+            "name": "ca_root_nss",
+            "version": "3.125"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "compat13x-amd64",
+            "version": "13.5.1305000.20250911"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "compat14x-amd64",
+            "version": "14.2.1402000.20251120_1"
+          },
+          {
+            "licenses": [
+              "ISCL"
+            ],
+            "name": "execline",
+            "version": "2.9.8.1"
+          },
+          {
+            "licenses": [
+              "GPLv3+",
+              "LGPL21+"
+            ],
+            "name": "gettext-runtime",
+            "version": "1.0_1"
+          },
+          {
+            "licenses": [
+              "ICU"
+            ],
+            "name": "icu",
+            "version": "76.1,1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "indexinfo",
+            "version": "0.3.1_1"
+          },
+          {
+            "licenses": [
+              "MIT"
+            ],
+            "name": "jq",
+            "version": "1.8.2"
+          },
+          {
+            "licenses": [
+              "MIT"
+            ],
+            "name": "krb5",
+            "version": "1.22.2_3"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "libedit",
+            "version": "3.1.20260512,1"
+          },
+          {
+            "licenses": [
+              "GPLv3"
+            ],
+            "name": "libiconv",
+            "version": "1.18_1"
+          },
+          {
+            "licenses": [
+              "MIT"
+            ],
+            "name": "libinotify",
+            "version": "20240724_3"
+          },
+          {
+            "licenses": [
+              "MIT"
+            ],
+            "name": "libunwind",
+            "version": "20250904"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "oniguruma",
+            "version": "6.9.10"
+          },
+          {
+            "licenses": [
+              "APACHE20"
+            ],
+            "name": "openssl",
+            "version": "3.0.21,1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
+            "name": "pkg",
+            "version": "2.7.5"
+          },
+          {
+            "licenses": [
+              "GPLv3"
+            ],
+            "name": "radarr",
+            "version": "6.1.1.10360"
+          },
+          {
+            "licenses": [
+              "GPLv3"
+            ],
+            "name": "readline",
+            "version": "8.3.3"
+          },
+          {
+            "licenses": [
+              "ISCL"
+            ],
+            "name": "s6",
+            "version": "2.14.0.1"
+          },
+          {
+            "licenses": [
+              "ISCL"
+            ],
+            "name": "skalibs",
+            "version": "2.14.5.1"
+          },
+          {
+            "licenses": [
+              "PD"
+            ],
+            "name": "sqlite3",
+            "version": "3.53.3,1"
+          }
+        ],
+        "go": [],
+        "java": [],
+        "node": [],
+        "php": [],
+        "python": [],
+        "ruby": [],
+        "rust": []
+      },
+      "source": "upstream",
+      "summary": {
+        "dotnet": 124,
+        "freebsd": 59,
+        "go": 0,
+        "java": 0,
+        "node": 0,
+        "php": 0,
+        "python": 0,
+        "ruby": 0,
+        "rust": 0,
+        "total": 183
+      }
+    },
+    "latest": {
+      "app_version": "6.3.0.10514",
+      "arch": "amd64",
+      "generated": "2026-08-06T07:25:30Z",
+      "packages": {
+        "dotnet": [
+          {
+            "name": "Azure.Core",
+            "purl": "",
+            "version": "1.50.0"
+          },
+          {
+            "name": "Azure.Identity",
+            "purl": "",
+            "version": "1.17.1"
+          },
+          {
+            "name": "BouncyCastle.Cryptography",
+            "purl": "",
+            "version": "2.6.2"
+          },
+          {
+            "name": "Dapper",
+            "purl": "",
+            "version": "2.1.79"
+          },
+          {
+            "name": "Diacritical.Net",
+            "purl": "",
+            "version": "1.0.4"
+          },
+          {
+            "name": "DryIoc.Microsoft.DependencyInjection",
+            "purl": "",
+            "version": "6.2.0"
+          },
+          {
+            "name": "DryIoc.dll",
+            "purl": "",
+            "version": "5.4.3"
+          },
+          {
+            "name": "Dynamitey",
+            "purl": "",
+            "version": "3.0.3"
+          },
+          {
+            "name": "Equ",
+            "purl": "",
+            "version": "2.3.0"
+          },
+          {
+            "name": "FluentMigrator",
+            "purl": "",
+            "version": "6.2.0"
+          },
+          {
+            "name": "FluentMigrator.Abstractions",
+            "purl": "",
+            "version": "6.2.0"
+          },
+          {
+            "name": "FluentMigrator.Extensions.Postgres",
+            "purl": "",
+            "version": "6.2.0"
+          },
+          {
+            "name": "FluentMigrator.Runner.Core",
+            "purl": "",
+            "version": "6.2.0"
+          },
+          {
+            "name": "FluentMigrator.Runner.Postgres",
+            "purl": "",
+            "version": "6.2.0"
+          },
+          {
+            "name": "FluentMigrator.Runner.SQLite",
+            "purl": "",
+            "version": "6.2.0"
+          },
+          {
+            "name": "FluentValidation",
+            "purl": "",
+            "version": "9.5.4"
+          },
+          {
+            "name": "IPAddressRange",
+            "purl": "",
+            "version": "6.3.0"
+          },
+          {
+            "name": "Ical.Net",
+            "purl": "",
+            "version": "4.3.1"
+          },
+          {
+            "name": "ImpromptuInterface",
+            "purl": "",
+            "version": "8.0.6"
+          },
+          {
+            "name": "Instances",
+            "purl": "",
+            "version": "1.6.1"
+          },
+          {
+            "name": "MailKit",
+            "purl": "",
+            "version": "4.16.0"
+          },
+          {
+            "name": "Microsoft.AspNetCore.App.Runtime.freebsd-x64",
+            "purl": "",
+            "version": "8.0.27"
+          },
+          {
+            "name": "Microsoft.AspNetCore.Cryptography.Internal",
+            "purl": "",
+            "version": "8.0.27"
+          },
+          {
+            "name": "Microsoft.AspNetCore.Cryptography.KeyDerivation",
+            "purl": "",
+            "version": "8.0.27"
+          },
+          {
+            "name": "Microsoft.Bcl.AsyncInterfaces",
+            "purl": "",
+            "version": "8.0.0"
+          },
+          {
+            "name": "Microsoft.Bcl.Cryptography",
+            "purl": "",
+            "version": "8.0.0"
+          },
+          {
+            "name": "Microsoft.Data.SqlClient",
+            "purl": "",
+            "version": "6.1.5"
+          },
+          {
+            "name": "Microsoft.Extensions.Caching.Abstractions",
+            "purl": "",
+            "version": "8.0.0"
+          },
+          {
+            "name": "Microsoft.Extensions.Caching.Memory",
+            "purl": "",
+            "version": "8.0.1"
+          },
+          {
+            "name": "Microsoft.Extensions.Configuration",
+            "purl": "",
+            "version": "8.0.0"
+          },
+          {
+            "name": "Microsoft.Extensions.Configuration.Abstractions",
+            "purl": "",
+            "version": "8.0.0"
+          },
+          {
+            "name": "Microsoft.Extensions.Configuration.Binder",
+            "purl": "",
+            "version": "8.0.2"
+          },
+          {
+            "name": "Microsoft.Extensions.Configuration.CommandLine",
+            "purl": "",
+            "version": "8.0.0"
+          },
+          {
+            "name": "Microsoft.Extensions.Configuration.EnvironmentVariables",
+            "purl": "",
+            "version": "8.0.0"
+          },
+          {
+            "name": "Microsoft.Extensions.Configuration.FileExtensions",
+            "purl": "",
+            "version": "8.0.1"
+          },
+          {
+            "name": "Microsoft.Extensions.Configuration.Json",
+            "purl": "",
+            "version": "8.0.1"
+          },
+          {
+            "name": "Microsoft.Extensions.Configuration.UserSecrets",
+            "purl": "",
+            "version": "8.0.1"
+          },
+          {
+            "name": "Microsoft.Extensions.DependencyInjection",
+            "purl": "",
+            "version": "8.0.1"
+          },
+          {
+            "name": "Microsoft.Extensions.DependencyInjection.Abstractions",
+            "purl": "",
+            "version": "8.0.2"
+          },
+          {
+            "name": "Microsoft.Extensions.Diagnostics",
+            "purl": "",
+            "version": "8.0.1"
+          },
+          {
+            "name": "Microsoft.Extensions.Diagnostics.Abstractions",
+            "purl": "",
+            "version": "8.0.1"
+          },
+          {
+            "name": "Microsoft.Extensions.FileProviders.Abstractions",
+            "purl": "",
+            "version": "8.0.0"
+          },
+          {
+            "name": "Microsoft.Extensions.FileProviders.Physical",
+            "purl": "",
+            "version": "8.0.0"
+          },
+          {
+            "name": "Microsoft.Extensions.FileSystemGlobbing",
+            "purl": "",
+            "version": "8.0.0"
+          },
+          {
+            "name": "Microsoft.Extensions.Hosting",
+            "purl": "",
+            "version": "8.0.1"
+          },
+          {
+            "name": "Microsoft.Extensions.Hosting.Abstractions",
+            "purl": "",
+            "version": "8.0.1"
+          },
+          {
+            "name": "Microsoft.Extensions.Hosting.WindowsServices",
+            "purl": "",
+            "version": "8.0.1"
+          },
+          {
+            "name": "Microsoft.Extensions.Logging",
+            "purl": "",
+            "version": "8.0.1"
+          },
+          {
+            "name": "Microsoft.Extensions.Logging.Abstractions",
+            "purl": "",
+            "version": "8.0.3"
+          },
+          {
+            "name": "Microsoft.Extensions.Logging.Configuration",
+            "purl": "",
+            "version": "8.0.1"
+          },
+          {
+            "name": "Microsoft.Extensions.Logging.Console",
+            "purl": "",
+            "version": "8.0.1"
+          },
+          {
+            "name": "Microsoft.Extensions.Logging.Debug",
+            "purl": "",
+            "version": "8.0.1"
+          },
+          {
+            "name": "Microsoft.Extensions.Logging.EventLog",
+            "purl": "",
+            "version": "8.0.1"
+          },
+          {
+            "name": "Microsoft.Extensions.Logging.EventSource",
+            "purl": "",
+            "version": "8.0.1"
+          },
+          {
+            "name": "Microsoft.Extensions.Options",
+            "purl": "",
+            "version": "8.0.2"
+          },
+          {
+            "name": "Microsoft.Extensions.Options.ConfigurationExtensions",
+            "purl": "",
+            "version": "8.0.0"
+          },
+          {
+            "name": "Microsoft.Extensions.Primitives",
+            "purl": "",
+            "version": "8.0.0"
+          },
+          {
+            "name": "Microsoft.Identity.Client",
+            "purl": "",
+            "version": "4.80.0"
+          },
+          {
+            "name": "Microsoft.Identity.Client.Extensions.Msal",
+            "purl": "",
+            "version": "4.78.0"
+          },
+          {
+            "name": "Microsoft.IdentityModel.Abstractions",
+            "purl": "",
+            "version": "8.14.0"
+          },
+          {
+            "name": "Microsoft.IdentityModel.JsonWebTokens",
+            "purl": "",
+            "version": "7.7.1"
+          },
+          {
+            "name": "Microsoft.IdentityModel.Logging",
+            "purl": "",
+            "version": "7.7.1"
+          },
+          {
+            "name": "Microsoft.IdentityModel.Protocols",
+            "purl": "",
+            "version": "7.7.1"
+          },
+          {
+            "name": "Microsoft.IdentityModel.Protocols.OpenIdConnect",
+            "purl": "",
+            "version": "7.7.1"
+          },
+          {
+            "name": "Microsoft.IdentityModel.Tokens",
+            "purl": "",
+            "version": "7.7.1"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Runtime.freebsd-x64",
+            "purl": "",
+            "version": "8.0.27"
+          },
+          {
+            "name": "Microsoft.OpenApi",
+            "purl": "",
+            "version": "1.6.23"
+          },
+          {
+            "name": "Microsoft.SqlServer.Server",
+            "purl": "",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Microsoft.Win32.SystemEvents",
+            "purl": "",
+            "version": "8.0.0"
+          },
+          {
+            "name": "MimeKit",
+            "purl": "",
+            "version": "4.16.0"
+          },
+          {
+            "name": "Mono.Nat",
+            "purl": "",
+            "version": "3.0.0"
+          },
+          {
+            "name": "Mono.Posix.NETStandard",
+            "purl": "",
+            "version": "5.20.1.34-servarr20"
+          },
+          {
+            "name": "MonoTorrent",
+            "purl": "",
+            "version": "3.0.2"
+          },
+          {
+            "name": "NLog",
+            "purl": "",
+            "version": "5.5.1"
+          },
+          {
+            "name": "NLog.Extensions.Logging",
+            "purl": "",
+            "version": "5.5.0"
+          },
+          {
+            "name": "NLog.Layouts.ClefJsonLayout",
+            "purl": "",
+            "version": "1.0.5"
+          },
+          {
+            "name": "NLog.Targets.Syslog",
+            "purl": "",
+            "version": "7.0.0"
+          },
+          {
+            "name": "Newtonsoft.Json",
+            "purl": "",
+            "version": "13.0.4"
+          },
+          {
+            "name": "NodaTime",
+            "purl": "",
+            "version": "3.2.0"
+          },
+          {
+            "name": "Npgsql",
+            "purl": "",
+            "version": "9.0.5"
+          },
+          {
+            "name": "Polly",
+            "purl": "",
+            "version": "8.6.6"
+          },
+          {
+            "name": "Polly.Contrib.WaitAndRetry",
+            "purl": "",
+            "version": "1.1.1"
+          },
+          {
+            "name": "Polly.Core",
+            "purl": "",
+            "version": "8.6.6"
           },
           {
             "name": "Radarr.Api.V3",
@@ -1065,7 +2135,7 @@
       },
       "source": "upstream",
       "summary": {
-        "dotnet": 126,
+        "dotnet": 127,
         "freebsd": 59,
         "go": 0,
         "java": 0,
@@ -1074,13 +2144,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 185
+        "total": 186
       }
     },
-    "latest": {
-      "app_version": "6.3.0.10514",
+    "nightly": {
+      "app_version": "6.4.2.10565",
       "arch": "amd64",
-      "generated": "2026-08-01T14:20:50Z",
+      "generated": "2026-08-06T07:24:35Z",
       "packages": {
         "dotnet": [
           {
@@ -1187,6 +2257,11 @@
             "name": "MailKit",
             "purl": "",
             "version": "4.16.0"
+          },
+          {
+            "name": "Microsoft.AspNetCore.App.Runtime.freebsd-x64",
+            "purl": "",
+            "version": "8.0.27"
           },
           {
             "name": "Microsoft.AspNetCore.Cryptography.Internal",
@@ -1402,6 +2477,11 @@
             "name": "Microsoft.IdentityModel.Tokens",
             "purl": "",
             "version": "7.7.1"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Runtime.freebsd-x64",
+            "purl": "",
+            "version": "8.0.27"
           },
           {
             "name": "Microsoft.OpenApi",
@@ -1504,1057 +2584,7 @@
             "version": "1.0.0"
           },
           {
-            "name": "Radarr.SignalR",
-            "purl": "",
-            "version": "1.0.0"
-          },
-          {
-            "name": "ReusableTasks",
-            "purl": "",
-            "version": "4.0.0"
-          },
-          {
-            "name": "Sentry",
-            "purl": "",
-            "version": "4.0.2"
-          },
-          {
-            "name": "Servarr.FFMpegCore",
-            "purl": "",
-            "version": "4.7.0-26"
-          },
-          {
-            "name": "Servarr.FFprobe",
-            "purl": "",
-            "version": "5.1.10.124"
-          },
-          {
-            "name": "SharpZipLib",
-            "purl": "",
-            "version": "1.4.2"
-          },
-          {
-            "name": "SixLabors.ImageSharp",
-            "purl": "",
-            "version": "3.1.12"
-          },
-          {
-            "name": "Swashbuckle.AspNetCore.Annotations",
-            "purl": "",
-            "version": "8.1.4"
-          },
-          {
-            "name": "Swashbuckle.AspNetCore.Swagger",
-            "purl": "",
-            "version": "8.1.4"
-          },
-          {
-            "name": "Swashbuckle.AspNetCore.SwaggerGen",
-            "purl": "",
-            "version": "8.1.4"
-          },
-          {
-            "name": "System.ClientModel",
-            "purl": "",
-            "version": "1.8.0"
-          },
-          {
-            "name": "System.ComponentModel",
-            "purl": "",
-            "version": "4.3.0"
-          },
-          {
-            "name": "System.ComponentModel.Annotations",
-            "purl": "",
-            "version": "5.0.0"
-          },
-          {
-            "name": "System.Configuration.ConfigurationManager",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
-            "name": "System.Data.SQLite",
-            "purl": "",
-            "version": "2.0.3"
-          },
-          {
-            "name": "System.Diagnostics.DiagnosticSource",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
-            "name": "System.Diagnostics.EventLog",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
-            "name": "System.Drawing.Common",
-            "purl": "",
-            "version": "8.0.27"
-          },
-          {
-            "name": "System.Formats.Asn1",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
-            "name": "System.IO.FileSystem.AccessControl",
-            "purl": "",
-            "version": "5.0.0"
-          },
-          {
-            "name": "System.IdentityModel.Tokens.Jwt",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "System.Memory.Data",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
-            "name": "System.Runtime.CompilerServices.Unsafe",
-            "purl": "",
-            "version": "6.0.0"
-          },
-          {
-            "name": "System.Runtime.Loader",
-            "purl": "",
-            "version": "4.3.0"
-          },
-          {
-            "name": "System.Security.AccessControl",
-            "purl": "",
-            "version": "5.0.0"
-          },
-          {
-            "name": "System.Security.Cryptography.Pkcs",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
-            "name": "System.Security.Cryptography.ProtectedData",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
-            "name": "System.Security.Principal.Windows",
-            "purl": "",
-            "version": "5.0.0"
-          },
-          {
-            "name": "System.ServiceProcess.ServiceController",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
-            "name": "System.Text.Encoding.CodePages",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
-            "name": "System.Text.Json",
-            "purl": "",
-            "version": "8.0.6"
-          },
-          {
-            "name": "runtime.any.System.IO",
-            "purl": "",
-            "version": "4.3.0"
-          },
-          {
-            "name": "runtime.any.System.Reflection",
-            "purl": "",
-            "version": "4.3.0"
-          },
-          {
-            "name": "runtime.any.System.Reflection.Primitives",
-            "purl": "",
-            "version": "4.3.0"
-          },
-          {
-            "name": "runtime.any.System.Runtime",
-            "purl": "",
-            "version": "4.3.0"
-          },
-          {
-            "name": "runtime.any.System.Text.Encoding",
-            "purl": "",
-            "version": "4.3.0"
-          },
-          {
-            "name": "runtime.any.System.Threading.Tasks",
-            "purl": "",
-            "version": "4.3.0"
-          },
-          {
-            "name": "runtime.unix.System.Private.Uri",
-            "purl": "",
-            "version": "4.3.0"
-          }
-        ],
-        "freebsd": [
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-audit-lib",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-blocklist",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-bzip2-lib",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-certctl",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-clibs",
-            "version": "15.1p2"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-clibs-lib32",
-            "version": "15.1p2"
-          },
-          {
-            "licenses": [
-              "CDDL-1.0"
-            ],
-            "name": "FreeBSD-ctf-lib",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-fetch",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-kerberos-lib",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-libarchive",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-libbsdstat",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-libcasper",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-libexecinfo",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-libldns",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-libmagic",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-libsqlite3",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-libsqlite3-lib32",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-libucl",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-locales",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-mtree",
-            "version": "15.1p2"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-ncurses",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-ncurses-lib",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-ncurses-lib32",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-openssl",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-openssl-lib",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-pam-lib",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-pkg-bootstrap",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-rc",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-runtime",
-            "version": "15.1p2"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-runtime-lib32",
-            "version": "15.1p1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-tcpd",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-ufs-lib",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-utilities",
-            "version": "15.1p2"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-xz-lib",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "CDDL-1.0"
-            ],
-            "name": "FreeBSD-zfs-lib",
-            "version": "15.1p1"
-          },
-          {
-            "licenses": [
-              "Zlib"
-            ],
-            "name": "FreeBSD-zlib",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "PD"
-            ],
-            "name": "FreeBSD-zoneinfo",
-            "version": "15.1p2"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "FreeBSD-zstd-lib",
-            "version": "15.1"
-          },
-          {
-            "licenses": [
-              "MPL20"
-            ],
-            "name": "ca_root_nss",
-            "version": "3.125"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "compat13x-amd64",
-            "version": "13.5.1305000.20250911"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "compat14x-amd64",
-            "version": "14.2.1402000.20251120_1"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "execline",
-            "version": "2.9.8.1"
-          },
-          {
-            "licenses": [
-              "GPLv3+",
-              "LGPL21+"
-            ],
-            "name": "gettext-runtime",
-            "version": "1.0_1"
-          },
-          {
-            "licenses": [
-              "ICU"
-            ],
-            "name": "icu",
-            "version": "76.1,1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "indexinfo",
-            "version": "0.3.1_1"
-          },
-          {
-            "licenses": [
-              "MIT"
-            ],
-            "name": "jq",
-            "version": "1.8.2"
-          },
-          {
-            "licenses": [
-              "MIT"
-            ],
-            "name": "krb5",
-            "version": "1.22.2_3"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "libedit",
-            "version": "3.1.20260512,1"
-          },
-          {
-            "licenses": [
-              "GPLv3"
-            ],
-            "name": "libiconv",
-            "version": "1.18_1"
-          },
-          {
-            "licenses": [
-              "MIT"
-            ],
-            "name": "libinotify",
-            "version": "20240724_3"
-          },
-          {
-            "licenses": [
-              "MIT"
-            ],
-            "name": "libunwind",
-            "version": "20250904"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "oniguruma",
-            "version": "6.9.10"
-          },
-          {
-            "licenses": [
-              "APACHE20"
-            ],
-            "name": "openssl",
-            "version": "3.0.21,1"
-          },
-          {
-            "licenses": [
-              "BSD2CLAUSE"
-            ],
-            "name": "pkg",
-            "version": "2.7.5"
-          },
-          {
-            "licenses": [
-              "GPLv3"
-            ],
-            "name": "radarr",
-            "version": "6.1.1.10360"
-          },
-          {
-            "licenses": [
-              "GPLv3"
-            ],
-            "name": "readline",
-            "version": "8.3.3"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "s6",
-            "version": "2.14.0.1"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "skalibs",
-            "version": "2.14.5.1"
-          },
-          {
-            "licenses": [
-              "PD"
-            ],
-            "name": "sqlite3",
-            "version": "3.53.3,1"
-          }
-        ],
-        "go": [],
-        "java": [],
-        "node": [],
-        "php": [],
-        "python": [],
-        "ruby": [],
-        "rust": []
-      },
-      "source": "upstream",
-      "summary": {
-        "dotnet": 122,
-        "freebsd": 59,
-        "go": 0,
-        "java": 0,
-        "node": 0,
-        "php": 0,
-        "python": 0,
-        "ruby": 0,
-        "rust": 0,
-        "total": 181
-      }
-    },
-    "nightly": {
-      "app_version": "6.4.1.10545",
-      "arch": "amd64",
-      "generated": "2026-08-01T14:20:52Z",
-      "packages": {
-        "dotnet": [
-          {
-            "name": "Azure.Core",
-            "purl": "",
-            "version": "1.50.0"
-          },
-          {
-            "name": "Azure.Identity",
-            "purl": "",
-            "version": "1.17.1"
-          },
-          {
-            "name": "BouncyCastle.Cryptography",
-            "purl": "",
-            "version": "2.6.2"
-          },
-          {
-            "name": "Dapper",
-            "purl": "",
-            "version": "2.1.79"
-          },
-          {
-            "name": "Diacritical.Net",
-            "purl": "",
-            "version": "1.0.4"
-          },
-          {
-            "name": "DryIoc.Microsoft.DependencyInjection",
-            "purl": "",
-            "version": "6.2.0"
-          },
-          {
-            "name": "DryIoc.dll",
-            "purl": "",
-            "version": "5.4.3"
-          },
-          {
-            "name": "Dynamitey",
-            "purl": "",
-            "version": "3.0.3"
-          },
-          {
-            "name": "Equ",
-            "purl": "",
-            "version": "2.3.0"
-          },
-          {
-            "name": "FluentMigrator",
-            "purl": "",
-            "version": "6.2.0"
-          },
-          {
-            "name": "FluentMigrator.Abstractions",
-            "purl": "",
-            "version": "6.2.0"
-          },
-          {
-            "name": "FluentMigrator.Extensions.Postgres",
-            "purl": "",
-            "version": "6.2.0"
-          },
-          {
-            "name": "FluentMigrator.Runner.Core",
-            "purl": "",
-            "version": "6.2.0"
-          },
-          {
-            "name": "FluentMigrator.Runner.Postgres",
-            "purl": "",
-            "version": "6.2.0"
-          },
-          {
-            "name": "FluentMigrator.Runner.SQLite",
-            "purl": "",
-            "version": "6.2.0"
-          },
-          {
-            "name": "FluentValidation",
-            "purl": "",
-            "version": "9.5.4"
-          },
-          {
-            "name": "IPAddressRange",
-            "purl": "",
-            "version": "6.3.0"
-          },
-          {
-            "name": "Ical.Net",
-            "purl": "",
-            "version": "4.3.1"
-          },
-          {
-            "name": "ImpromptuInterface",
-            "purl": "",
-            "version": "8.0.6"
-          },
-          {
-            "name": "Instances",
-            "purl": "",
-            "version": "1.6.1"
-          },
-          {
-            "name": "MailKit",
-            "purl": "",
-            "version": "4.16.0"
-          },
-          {
-            "name": "Microsoft.AspNetCore.Cryptography.Internal",
-            "purl": "",
-            "version": "8.0.27"
-          },
-          {
-            "name": "Microsoft.AspNetCore.Cryptography.KeyDerivation",
-            "purl": "",
-            "version": "8.0.27"
-          },
-          {
-            "name": "Microsoft.Bcl.AsyncInterfaces",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
-            "name": "Microsoft.Bcl.Cryptography",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
-            "name": "Microsoft.Data.SqlClient",
-            "purl": "",
-            "version": "6.1.5"
-          },
-          {
-            "name": "Microsoft.Extensions.Caching.Abstractions",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
-            "name": "Microsoft.Extensions.Caching.Memory",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
-            "name": "Microsoft.Extensions.Configuration",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
-            "name": "Microsoft.Extensions.Configuration.Abstractions",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
-            "name": "Microsoft.Extensions.Configuration.Binder",
-            "purl": "",
-            "version": "8.0.2"
-          },
-          {
-            "name": "Microsoft.Extensions.Configuration.CommandLine",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
-            "name": "Microsoft.Extensions.Configuration.EnvironmentVariables",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
-            "name": "Microsoft.Extensions.Configuration.FileExtensions",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
-            "name": "Microsoft.Extensions.Configuration.Json",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
-            "name": "Microsoft.Extensions.Configuration.UserSecrets",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
-            "name": "Microsoft.Extensions.DependencyInjection",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
-            "name": "Microsoft.Extensions.DependencyInjection.Abstractions",
-            "purl": "",
-            "version": "8.0.2"
-          },
-          {
-            "name": "Microsoft.Extensions.Diagnostics",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
-            "name": "Microsoft.Extensions.Diagnostics.Abstractions",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
-            "name": "Microsoft.Extensions.FileProviders.Abstractions",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
-            "name": "Microsoft.Extensions.FileProviders.Physical",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
-            "name": "Microsoft.Extensions.FileSystemGlobbing",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
-            "name": "Microsoft.Extensions.Hosting",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
-            "name": "Microsoft.Extensions.Hosting.Abstractions",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
-            "name": "Microsoft.Extensions.Hosting.WindowsServices",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
-            "name": "Microsoft.Extensions.Logging",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
-            "name": "Microsoft.Extensions.Logging.Abstractions",
-            "purl": "",
-            "version": "8.0.3"
-          },
-          {
-            "name": "Microsoft.Extensions.Logging.Configuration",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
-            "name": "Microsoft.Extensions.Logging.Console",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
-            "name": "Microsoft.Extensions.Logging.Debug",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
-            "name": "Microsoft.Extensions.Logging.EventLog",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
-            "name": "Microsoft.Extensions.Logging.EventSource",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
-            "name": "Microsoft.Extensions.Options",
-            "purl": "",
-            "version": "8.0.2"
-          },
-          {
-            "name": "Microsoft.Extensions.Options.ConfigurationExtensions",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
-            "name": "Microsoft.Extensions.Primitives",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
-            "name": "Microsoft.Identity.Client",
-            "purl": "",
-            "version": "4.80.0"
-          },
-          {
-            "name": "Microsoft.Identity.Client.Extensions.Msal",
-            "purl": "",
-            "version": "4.78.0"
-          },
-          {
-            "name": "Microsoft.IdentityModel.Abstractions",
-            "purl": "",
-            "version": "8.14.0"
-          },
-          {
-            "name": "Microsoft.IdentityModel.JsonWebTokens",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.Logging",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.Protocols",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.Protocols.OpenIdConnect",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.Tokens",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "Microsoft.OpenApi",
-            "purl": "",
-            "version": "1.6.23"
-          },
-          {
-            "name": "Microsoft.SqlServer.Server",
-            "purl": "",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Microsoft.Win32.SystemEvents",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
-            "name": "MimeKit",
-            "purl": "",
-            "version": "4.16.0"
-          },
-          {
-            "name": "Mono.Nat",
-            "purl": "",
-            "version": "3.0.0"
-          },
-          {
-            "name": "Mono.Posix.NETStandard",
-            "purl": "",
-            "version": "5.20.1.34-servarr20"
-          },
-          {
-            "name": "MonoTorrent",
-            "purl": "",
-            "version": "3.0.2"
-          },
-          {
-            "name": "NLog",
-            "purl": "",
-            "version": "5.5.1"
-          },
-          {
-            "name": "NLog.Extensions.Logging",
-            "purl": "",
-            "version": "5.5.0"
-          },
-          {
-            "name": "NLog.Layouts.ClefJsonLayout",
-            "purl": "",
-            "version": "1.0.5"
-          },
-          {
-            "name": "NLog.Targets.Syslog",
-            "purl": "",
-            "version": "7.0.0"
-          },
-          {
-            "name": "Newtonsoft.Json",
-            "purl": "",
-            "version": "13.0.4"
-          },
-          {
-            "name": "NodaTime",
-            "purl": "",
-            "version": "3.2.0"
-          },
-          {
-            "name": "Npgsql",
-            "purl": "",
-            "version": "9.0.5"
-          },
-          {
-            "name": "Polly",
-            "purl": "",
-            "version": "8.6.6"
-          },
-          {
-            "name": "Polly.Contrib.WaitAndRetry",
-            "purl": "",
-            "version": "1.1.1"
-          },
-          {
-            "name": "Polly.Core",
-            "purl": "",
-            "version": "8.6.6"
-          },
-          {
-            "name": "Radarr",
-            "purl": "",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Radarr.Common",
-            "purl": "",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Radarr.Core",
+            "name": "Radarr.Http",
             "purl": "",
             "version": "1.0.0"
           },
@@ -3180,7 +3210,7 @@
       },
       "source": "upstream",
       "summary": {
-        "dotnet": 123,
+        "dotnet": 126,
         "freebsd": 59,
         "go": 0,
         "java": 0,
@@ -3189,13 +3219,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 182
+        "total": 185
       }
     },
     "pkg": {
       "app_version": "6.1.1.10360",
       "arch": "amd64",
-      "generated": "2026-08-01T14:20:34Z",
+      "generated": "2026-08-06T07:28:04Z",
       "packages": {
         "dotnet": [
           {
@@ -3302,6 +3332,11 @@
             "name": "MailKit",
             "purl": "",
             "version": "4.15.1"
+          },
+          {
+            "name": "Microsoft.AspNetCore.App.Runtime.freebsd-x64",
+            "purl": "",
+            "version": "8.0.12"
           },
           {
             "name": "Microsoft.AspNetCore.Cryptography.Internal",
@@ -3519,6 +3554,11 @@
             "version": "7.7.1"
           },
           {
+            "name": "Microsoft.NETCore.App.Runtime.freebsd-x64",
+            "purl": "",
+            "version": "8.0.12"
+          },
+          {
             "name": "Microsoft.OpenApi",
             "purl": "",
             "version": "1.6.23"
@@ -3604,17 +3644,17 @@
             "version": "8.6.0"
           },
           {
+            "name": "Radarr",
+            "purl": "",
+            "version": "1.0.0"
+          },
+          {
             "name": "Radarr.Common",
             "purl": "",
             "version": "1.0.0"
           },
           {
             "name": "Radarr.Core",
-            "purl": "",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Radarr.Http",
             "purl": "",
             "version": "1.0.0"
           },
@@ -4167,7 +4207,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 121,
+        "dotnet": 123,
         "freebsd": 50,
         "go": 0,
         "java": 0,
@@ -4176,24 +4216,24 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 171
+        "total": 173
       }
     },
     "pkg-latest": {
-      "app_version": "6.1.1.10360",
+      "app_version": "6.3.0.10514",
       "arch": "amd64",
-      "generated": "2026-08-01T14:21:08Z",
+      "generated": "2026-08-06T07:25:40Z",
       "packages": {
         "dotnet": [
           {
             "name": "Azure.Core",
             "purl": "",
-            "version": "1.47.1"
+            "version": "1.50.0"
           },
           {
             "name": "Azure.Identity",
             "purl": "",
-            "version": "1.14.2"
+            "version": "1.17.1"
           },
           {
             "name": "BouncyCastle.Cryptography",
@@ -4203,7 +4243,7 @@
           {
             "name": "Dapper",
             "purl": "",
-            "version": "2.1.66"
+            "version": "2.1.79"
           },
           {
             "name": "Diacritical.Net",
@@ -4268,7 +4308,7 @@
           {
             "name": "IPAddressRange",
             "purl": "",
-            "version": "6.2.0"
+            "version": "6.3.0"
           },
           {
             "name": "Ical.Net",
@@ -4288,17 +4328,22 @@
           {
             "name": "MailKit",
             "purl": "",
-            "version": "4.15.1"
+            "version": "4.16.0"
+          },
+          {
+            "name": "Microsoft.AspNetCore.App.Runtime.freebsd-x64",
+            "purl": "",
+            "version": "8.0.27"
           },
           {
             "name": "Microsoft.AspNetCore.Cryptography.Internal",
             "purl": "",
-            "version": "8.0.17"
+            "version": "8.0.27"
           },
           {
             "name": "Microsoft.AspNetCore.Cryptography.KeyDerivation",
             "purl": "",
-            "version": "8.0.17"
+            "version": "8.0.27"
           },
           {
             "name": "Microsoft.Bcl.AsyncInterfaces",
@@ -4306,14 +4351,9 @@
             "version": "8.0.0"
           },
           {
-            "name": "Microsoft.Bcl.Cryptography",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
             "name": "Microsoft.Data.SqlClient",
             "purl": "",
-            "version": "6.1.1"
+            "version": "6.1.5"
           },
           {
             "name": "Microsoft.Extensions.Caching.Abstractions",
@@ -4468,17 +4508,17 @@
           {
             "name": "Microsoft.Identity.Client",
             "purl": "",
-            "version": "4.73.1"
+            "version": "4.80.0"
           },
           {
             "name": "Microsoft.Identity.Client.Extensions.Msal",
             "purl": "",
-            "version": "4.73.1"
+            "version": "4.78.0"
           },
           {
             "name": "Microsoft.IdentityModel.Abstractions",
             "purl": "",
-            "version": "7.7.1"
+            "version": "8.14.0"
           },
           {
             "name": "Microsoft.IdentityModel.JsonWebTokens",
@@ -4506,6 +4546,11 @@
             "version": "7.7.1"
           },
           {
+            "name": "Microsoft.NETCore.App.Runtime.freebsd-x64",
+            "purl": "",
+            "version": "8.0.27"
+          },
+          {
             "name": "Microsoft.OpenApi",
             "purl": "",
             "version": "1.6.23"
@@ -4523,7 +4568,7 @@
           {
             "name": "MimeKit",
             "purl": "",
-            "version": "4.15.1"
+            "version": "4.16.0"
           },
           {
             "name": "Mono.Nat",
@@ -4543,17 +4588,17 @@
           {
             "name": "NLog",
             "purl": "",
-            "version": "5.4.0"
+            "version": "5.5.1"
           },
           {
             "name": "NLog.Extensions.Logging",
             "purl": "",
-            "version": "5.4.0"
+            "version": "5.5.0"
           },
           {
             "name": "NLog.Layouts.ClefJsonLayout",
             "purl": "",
-            "version": "1.0.3"
+            "version": "1.0.5"
           },
           {
             "name": "NLog.Targets.Syslog",
@@ -4563,7 +4608,7 @@
           {
             "name": "Newtonsoft.Json",
             "purl": "",
-            "version": "13.0.3"
+            "version": "13.0.4"
           },
           {
             "name": "NodaTime",
@@ -4573,12 +4618,12 @@
           {
             "name": "Npgsql",
             "purl": "",
-            "version": "9.0.3"
+            "version": "9.0.5"
           },
           {
             "name": "Polly",
             "purl": "",
-            "version": "8.6.0"
+            "version": "8.6.6"
           },
           {
             "name": "Polly.Contrib.WaitAndRetry",
@@ -4588,12 +4633,7 @@
           {
             "name": "Polly.Core",
             "purl": "",
-            "version": "8.6.0"
-          },
-          {
-            "name": "Radarr",
-            "purl": "",
-            "version": "1.0.0"
+            "version": "8.6.6"
           },
           {
             "name": "Radarr.Api.V3",
@@ -4607,6 +4647,16 @@
           },
           {
             "name": "Radarr.Core",
+            "purl": "",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Radarr.Http",
+            "purl": "",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Radarr.Mono",
             "purl": "",
             "version": "1.0.0"
           },
@@ -4633,7 +4683,7 @@
           {
             "name": "Servarr.FFprobe",
             "purl": "",
-            "version": "5.1.4.112"
+            "version": "5.1.10.124"
           },
           {
             "name": "SharpZipLib",
@@ -4663,7 +4713,7 @@
           {
             "name": "System.ClientModel",
             "purl": "",
-            "version": "1.5.1"
+            "version": "1.8.0"
           },
           {
             "name": "System.ComponentModel",
@@ -4683,12 +4733,12 @@
           {
             "name": "System.Data.SQLite",
             "purl": "",
-            "version": "2.0.2"
+            "version": "2.0.3"
           },
           {
             "name": "System.Diagnostics.DiagnosticSource",
             "purl": "",
-            "version": "6.0.1"
+            "version": "8.0.1"
           },
           {
             "name": "System.Diagnostics.EventLog",
@@ -4698,7 +4748,7 @@
           {
             "name": "System.Drawing.Common",
             "purl": "",
-            "version": "8.0.20"
+            "version": "8.0.27"
           },
           {
             "name": "System.Formats.Asn1",
@@ -4719,11 +4769,6 @@
             "name": "System.Memory.Data",
             "purl": "",
             "version": "8.0.1"
-          },
-          {
-            "name": "System.Runtime.CompilerServices.Unsafe",
-            "purl": "",
-            "version": "6.0.0"
           },
           {
             "name": "System.Runtime.Loader",
@@ -4763,7 +4808,7 @@
           {
             "name": "System.Text.Json",
             "purl": "",
-            "version": "8.0.5"
+            "version": "8.0.6"
           },
           {
             "name": "runtime.any.System.IO",
@@ -5123,7 +5168,7 @@
               "GPLv3"
             ],
             "name": "radarr",
-            "version": "6.1.1.10360"
+            "version": "6.3.0.10514"
           },
           {
             "licenses": [
@@ -5164,7 +5209,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 123,
+        "dotnet": 124,
         "freebsd": 50,
         "go": 0,
         "java": 0,
@@ -5173,7 +5218,7 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 173
+        "total": 174
       }
     }
   }
