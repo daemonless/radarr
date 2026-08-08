@@ -82,7 +82,7 @@ services:
     name: radarr
     options:
       - container: 'boot args:--pull'
-      - expose: '7878:7878 proto:tcp' \
+      - expose: '7878:7878 proto:tcp'
     oci:
       user: root
       environment:
