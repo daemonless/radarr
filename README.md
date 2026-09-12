@@ -81,8 +81,9 @@ services:
   radarr:
     name: radarr
     options:
-      - container: 'boot args:--pull'
+      - container: 'args:--pull'
       - expose: '7878:7878 proto:tcp'
+      - template: !ENV '${PWD}/template.conf'
     oci:
       user: root
       environment:
@@ -109,14 +110,30 @@ volumes:
 
 ARG tag=latest
 
+OPTION container=boot
 OPTION overwrite=force
 OPTION from=ghcr.io/daemonless/radarr:${tag}
-SET allow.mlock=1
+```
+
+**template.conf**:
+
+```
+# template.conf
+
+exec.start: "/bin/sh /etc/rc"
+exec.stop: "/bin/sh /etc/rc.shutdown jail"
+mount.devfs
+persist
+allow.mlock
 ```
 
 Save the files above, then run `appjail-director up`.
 
-**Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
+
+> [!WARNING]
+> Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the jail's IPv4 address or hostname assigned by the virtual network.
+>
+> To avoid exposing ports, just remove the `expose` option in your `appjail-director.yml` or from your command-line arguments.
 
 ### Podman CLI
 
@@ -137,12 +154,14 @@ Save as `run.sh`, then run `sh run.sh`.
 
 ### AppJail
 
+
 ```bash
 appjail oci run -Pd \
   -o overwrite=force \
   -o container="args:--pull" \
   -o virtualnet=":<random> default" \
   -o nat \
+  -o template=template.conf \
   -o expose="7878:7878 proto:tcp" \
   -e PUID=1000 \
   -e PGID=1000 \
@@ -153,35 +172,57 @@ appjail oci run -Pd \
   ghcr.io/daemonless/radarr:latest radarr
 ```
 
-Save as `run.sh`, then run `sh run.sh`.
+**template.conf**:
+```
+# template.conf
 
-**Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
+exec.start: "/bin/sh /etc/rc"
+exec.stop: "/bin/sh /etc/rc.shutdown jail"
+mount.devfs
+persist
+allow.mlock
+```
+
+Save the files above, then run `sh run.sh`.
+
+
+> [!WARNING]
+> Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the jail's IPv4 address or hostname assigned by the virtual network.
+>
+> To avoid exposing ports, just remove the `expose` option in your `appjail-director.yml` or from your command-line arguments.
 
 ### Bastille
 
 > [!WARNING]
-> Bastille's OCI support is **experimental**. It requires `buildah`, shares the host network stack (`inherit`), and persists image-declared volumes under `--data-path`.
+> Bastille's OCI support is **experimental**. It requires `buildah` and shares the host network stack (`inherit`). Mount volumes with `--volume HOST JAIL`; without it, image-declared volumes are stored under `${bastille_volumesdir}/${jail}`.
 
 ```yaml
 services:
   radarr:
+    name: radarr
     image: "ghcr.io/daemonless/radarr:latest"
-    container_name: radarr
-    network_mode: host  # jail shares host networking
+    network:
+      - mode: host
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=UTC
+    volumes:
+      - "/path/to/containers/radarr:/config"
+      - "/path/to/movies:/movies"
+      - "/path/to/downloads:/downloads"
 ```
 
-Save as `podman-compose.yml`, then run `bastille up`. Or via CLI:
+Save as `bastille-compose.yml`, then run `bastille up`. Or via CLI:
 
 ```bash
 bastille create -O \
   --env PUID=1000 \
   --env PGID=1000 \
   --env TZ=UTC \
-  --data-path /path/to/containers/radarr \
+  --volume /path/to/containers/radarr /config \
+  --volume /path/to/movies /movies \
+  --volume /path/to/downloads /downloads \
   radarr ghcr.io/daemonless/radarr:latest inherit
 ```
 
