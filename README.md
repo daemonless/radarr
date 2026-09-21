@@ -7,6 +7,7 @@ Source: dbuild templates
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/daemonless/radarr/build.yaml?style=flat-square&label=Build&color=green)](https://github.com/daemonless/radarr/actions)
 [![Last Commit](https://img.shields.io/github/last-commit/daemonless/radarr?style=flat-square&label=Last+Commit&color=blue)](https://github.com/daemonless/radarr/commits)
+[![OCI Pulls](https://img.shields.io/docker/pulls/daemonless/radarr?style=flat-square&label=OCI+Pulls&color=blue)](https://hub.docker.com/r/daemonless/radarr)
 [![mlock Required](https://img.shields.io/badge/mlock-required-orange?style=flat-square&logo=freebsd&logoColor=white)](https://daemonless.io/guides/ocijail-patch/)
 
 Automated movie collection manager that monitors, grabs, and manages your movie library via Usenet and BitTorrent.
