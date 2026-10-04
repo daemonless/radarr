@@ -45,7 +45,7 @@ services:
       - PGID=1000  # Group ID for the application process
       - TZ=UTC  # Timezone for the container
     volumes:
-      - "/path/to/containers/radarr:/config"
+      - "/containers/radarr:/config"
       - "/path/to/movies:/movies" # optional
       - "/path/to/downloads:/downloads" # optional
     ports:
@@ -97,7 +97,7 @@ services:
       - downloads: /downloads
 volumes:
   radarr:
-    device: '/path/to/containers/radarr'
+    device: '/containers/radarr'
   movies:
     device: 'movies'
   downloads:
@@ -136,62 +136,6 @@ Save the files above, then run `appjail-director up`.
 >
 > To avoid exposing ports, just remove the `expose` option in your `appjail-director.yml` or from your command-line arguments.
 
-### Podman CLI
-
-```bash
-podman run -d --name radarr \
-  -p 7878:7878 \
-  --annotation 'org.freebsd.jail.allow.mlock=true' \
-  -e PUID=1000 \
-  -e PGID=1000 \
-  -e TZ=UTC \
-  -v /path/to/containers/radarr:/config \
-  -v /path/to/movies:/movies # optional \
-  -v /path/to/downloads:/downloads # optional \
-  ghcr.io/daemonless/radarr:latest
-```
-
-Save as `run.sh`, then run `sh run.sh`.
-
-### AppJail
-
-
-```bash
-appjail oci run -Pd \
-  -o overwrite=force \
-  -o container="args:--pull" \
-  -o virtualnet=":<random> default" \
-  -o nat \
-  -o template=template.conf \
-  -o expose="7878:7878 proto:tcp" \
-  -e PUID=1000 \
-  -e PGID=1000 \
-  -e TZ=UTC \
-  -o fstab="/path/to/containers/radarr /config <pseudofs>" \
-  -o fstab="/path/to/movies /movies <pseudofs>" \ # optional
-  -o fstab="/path/to/downloads /downloads <pseudofs>" \ # optional
-  ghcr.io/daemonless/radarr:latest radarr
-```
-
-**template.conf**:
-```
-# template.conf
-
-exec.start: "/bin/sh /etc/rc"
-exec.stop: "/bin/sh /etc/rc.shutdown jail"
-mount.devfs
-persist
-allow.mlock
-```
-
-Save the files above, then run `sh run.sh`.
-
-
-> [!WARNING]
-> Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the jail's IPv4 address or hostname assigned by the virtual network.
->
-> To avoid exposing ports, just remove the `expose` option in your `appjail-director.yml` or from your command-line arguments.
-
 ### Bastille
 
 > [!WARNING]
@@ -209,48 +153,12 @@ services:
       - PGID=1000
       - TZ=UTC
     volumes:
-      - "/path/to/containers/radarr:/config"
+      - "/containers/radarr:/config"
       - "/path/to/movies:/movies"
       - "/path/to/downloads:/downloads"
 ```
 
-Save as `bastille-compose.yml`, then run `bastille up`. Or via CLI:
-
-```bash
-bastille create -O \
-  --env PUID=1000 \
-  --env PGID=1000 \
-  --env TZ=UTC \
-  --volume /path/to/containers/radarr /config \
-  --volume /path/to/movies /movies \
-  --volume /path/to/downloads /downloads \
-  radarr ghcr.io/daemonless/radarr:latest inherit
-```
-
-### Ansible
-
-```yaml
-- name: Deploy radarr
-  containers.podman.podman_container:
-    name: radarr
-    image: "ghcr.io/daemonless/radarr:latest"
-    state: started
-    restart_policy: always
-    env:
-      PUID: "1000"
-      PGID: "1000"
-      TZ: "UTC"
-    ports:
-      - "7878:7878"
-    volumes:
-      - "/path/to/containers/radarr:/config"
-      - "/path/to/movies:/movies" # optional
-      - "/path/to/downloads:/downloads" # optional
-    annotation:
-      org.freebsd.jail.allow.mlock: "true"
-```
-
-Save as `radarr-deploy.yaml`, then run `ansible-playbook radarr-deploy.yaml`.
+Save as `bastille-compose.yml`, then run `bastille up`.
 
 Access at: `http://localhost:7878`
 

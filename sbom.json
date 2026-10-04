@@ -1,11 +1,11 @@
 {
-  "generated": "2026-09-27T22:10:56Z",
+  "generated": "2026-10-04T19:34:16Z",
   "image": "radarr",
   "tags": {
     "develop": {
       "app_version": "6.4.4.10685",
       "arch": "amd64",
-      "generated": "2026-09-27T22:09:30Z",
+      "generated": "2026-10-04T19:30:46Z",
       "packages": {
         "dotnet": [
           {
@@ -1104,7 +1104,7 @@
     "latest": {
       "app_version": "6.4.4.10685",
       "arch": "amd64",
-      "generated": "2026-09-27T22:09:44Z",
+      "generated": "2026-10-04T19:30:13Z",
       "packages": {
         "dotnet": [
           {
@@ -2201,9 +2201,9 @@
       }
     },
     "nightly": {
-      "app_version": "6.4.4.10704",
+      "app_version": "6.4.4.10716",
       "arch": "amd64",
-      "generated": "2026-09-27T22:10:15Z",
+      "generated": "2026-10-04T19:33:00Z",
       "packages": {
         "dotnet": [
           {
@@ -3302,7 +3302,7 @@
     "pkg": {
       "app_version": "6.1.1.10360",
       "arch": "amd64",
-      "generated": "2026-09-27T22:09:47Z",
+      "generated": "2026-10-04T19:33:46Z",
       "packages": {
         "dotnet": [
           {
@@ -4338,7 +4338,7 @@
     "pkg-latest": {
       "app_version": "6.4.4.10685",
       "arch": "amd64",
-      "generated": "2026-09-27T22:08:55Z",
+      "generated": "2026-10-04T19:31:39Z",
       "packages": {
         "dotnet": [
           {
