@@ -1,23 +1,13 @@
 {
-  "generated": "2026-10-04T19:34:16Z",
+  "generated": "2026-10-10T21:17:04Z",
   "image": "radarr",
   "tags": {
     "develop": {
       "app_version": "6.4.4.10685",
       "arch": "amd64",
-      "generated": "2026-10-04T19:30:46Z",
+      "generated": "2026-10-10T21:16:23Z",
       "packages": {
         "dotnet": [
-          {
-            "name": "Azure.Core",
-            "purl": "",
-            "version": "1.47.1"
-          },
-          {
-            "name": "Azure.Identity",
-            "purl": "",
-            "version": "1.14.2"
-          },
           {
             "name": "BouncyCastle.Cryptography",
             "purl": "",
@@ -127,31 +117,6 @@
             "name": "Microsoft.AspNetCore.Cryptography.KeyDerivation",
             "purl": "",
             "version": "8.0.27"
-          },
-          {
-            "name": "Microsoft.Bcl.AsyncInterfaces",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
-            "name": "Microsoft.Bcl.Cryptography",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
-            "name": "Microsoft.Data.SqlClient",
-            "purl": "",
-            "version": "6.1.1"
-          },
-          {
-            "name": "Microsoft.Extensions.Caching.Abstractions",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
-            "name": "Microsoft.Extensions.Caching.Memory",
-            "purl": "",
-            "version": "8.0.1"
           },
           {
             "name": "Microsoft.Extensions.Configuration",
@@ -294,46 +259,6 @@
             "version": "8.0.0"
           },
           {
-            "name": "Microsoft.Identity.Client",
-            "purl": "",
-            "version": "4.73.1"
-          },
-          {
-            "name": "Microsoft.Identity.Client.Extensions.Msal",
-            "purl": "",
-            "version": "4.73.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.Abstractions",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.JsonWebTokens",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.Logging",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.Protocols",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.Protocols.OpenIdConnect",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.Tokens",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
             "name": "Microsoft.NETCore.App.Runtime.freebsd-x64",
             "purl": "",
             "version": "8.0.27"
@@ -342,11 +267,6 @@
             "name": "Microsoft.OpenApi",
             "purl": "",
             "version": "1.6.23"
-          },
-          {
-            "name": "Microsoft.SqlServer.Server",
-            "purl": "",
-            "version": "1.0.0"
           },
           {
             "name": "Microsoft.Win32.SystemEvents",
@@ -509,11 +429,6 @@
             "version": "8.1.4"
           },
           {
-            "name": "System.ClientModel",
-            "purl": "",
-            "version": "1.5.1"
-          },
-          {
             "name": "System.ComponentModel",
             "purl": "",
             "version": "4.3.0"
@@ -524,19 +439,9 @@
             "version": "5.0.0"
           },
           {
-            "name": "System.Configuration.ConfigurationManager",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
             "name": "System.Data.SQLite",
             "purl": "",
             "version": "2.0.4"
-          },
-          {
-            "name": "System.Diagnostics.DiagnosticSource",
-            "purl": "",
-            "version": "6.0.1"
           },
           {
             "name": "System.Diagnostics.EventLog",
@@ -559,21 +464,6 @@
             "version": "5.0.0"
           },
           {
-            "name": "System.IdentityModel.Tokens.Jwt",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "System.Memory.Data",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
-            "name": "System.Runtime.CompilerServices.Unsafe",
-            "purl": "",
-            "version": "6.0.0"
-          },
-          {
             "name": "System.Runtime.Loader",
             "purl": "",
             "version": "4.3.0"
@@ -587,11 +477,6 @@
             "name": "System.Security.Cryptography.Pkcs",
             "purl": "",
             "version": "8.0.1"
-          },
-          {
-            "name": "System.Security.Cryptography.ProtectedData",
-            "purl": "",
-            "version": "8.0.0"
           },
           {
             "name": "System.Security.Principal.Windows",
@@ -683,14 +568,14 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-clibs",
-            "version": "15.1p2"
+            "version": "15.1p4"
           },
           {
             "licenses": [
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-clibs-lib32",
-            "version": "15.1p2"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -704,7 +589,7 @@
               "BSD-3-Clause"
             ],
             "name": "FreeBSD-dhclient",
-            "version": "15.1"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -739,7 +624,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-libcasper",
-            "version": "15.1"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -830,7 +715,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-openssl-lib",
-            "version": "15.1p3"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -865,14 +750,14 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p3"
+            "version": "15.1p4"
           },
           {
             "licenses": [
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime-lib32",
-            "version": "15.1p1"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -893,7 +778,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-utilities",
-            "version": "15.1p2"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -921,7 +806,7 @@
               "PD"
             ],
             "name": "FreeBSD-zoneinfo",
-            "version": "15.1p2"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -935,7 +820,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.129"
+            "version": "3.130"
           },
           {
             "licenses": [
@@ -1041,14 +926,14 @@
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.7.5"
+            "version": "2.8.4"
           },
           {
             "licenses": [
               "GPLv3"
             ],
             "name": "radarr",
-            "version": "6.1.1.10360"
+            "version": "6.4.4.10685"
           },
           {
             "licenses": [
@@ -1089,7 +974,7 @@
       },
       "source": "upstream",
       "summary": {
-        "dotnet": 128,
+        "dotnet": 105,
         "freebsd": 61,
         "go": 0,
         "java": 0,
@@ -1098,25 +983,15 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 189
+        "total": 166
       }
     },
     "latest": {
       "app_version": "6.4.4.10685",
       "arch": "amd64",
-      "generated": "2026-10-04T19:30:13Z",
+      "generated": "2026-10-10T21:16:01Z",
       "packages": {
         "dotnet": [
-          {
-            "name": "Azure.Core",
-            "purl": "",
-            "version": "1.47.1"
-          },
-          {
-            "name": "Azure.Identity",
-            "purl": "",
-            "version": "1.14.2"
-          },
           {
             "name": "BouncyCastle.Cryptography",
             "purl": "",
@@ -1226,31 +1101,6 @@
             "name": "Microsoft.AspNetCore.Cryptography.KeyDerivation",
             "purl": "",
             "version": "8.0.27"
-          },
-          {
-            "name": "Microsoft.Bcl.AsyncInterfaces",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
-            "name": "Microsoft.Bcl.Cryptography",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
-            "name": "Microsoft.Data.SqlClient",
-            "purl": "",
-            "version": "6.1.1"
-          },
-          {
-            "name": "Microsoft.Extensions.Caching.Abstractions",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
-            "name": "Microsoft.Extensions.Caching.Memory",
-            "purl": "",
-            "version": "8.0.1"
           },
           {
             "name": "Microsoft.Extensions.Configuration",
@@ -1393,46 +1243,6 @@
             "version": "8.0.0"
           },
           {
-            "name": "Microsoft.Identity.Client",
-            "purl": "",
-            "version": "4.73.1"
-          },
-          {
-            "name": "Microsoft.Identity.Client.Extensions.Msal",
-            "purl": "",
-            "version": "4.73.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.Abstractions",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.JsonWebTokens",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.Logging",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.Protocols",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.Protocols.OpenIdConnect",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.Tokens",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
             "name": "Microsoft.NETCore.App.Runtime.freebsd-x64",
             "purl": "",
             "version": "8.0.27"
@@ -1441,11 +1251,6 @@
             "name": "Microsoft.OpenApi",
             "purl": "",
             "version": "1.6.23"
-          },
-          {
-            "name": "Microsoft.SqlServer.Server",
-            "purl": "",
-            "version": "1.0.0"
           },
           {
             "name": "Microsoft.Win32.SystemEvents",
@@ -1608,11 +1413,6 @@
             "version": "8.1.4"
           },
           {
-            "name": "System.ClientModel",
-            "purl": "",
-            "version": "1.5.1"
-          },
-          {
             "name": "System.ComponentModel",
             "purl": "",
             "version": "4.3.0"
@@ -1623,19 +1423,9 @@
             "version": "5.0.0"
           },
           {
-            "name": "System.Configuration.ConfigurationManager",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
             "name": "System.Data.SQLite",
             "purl": "",
             "version": "2.0.4"
-          },
-          {
-            "name": "System.Diagnostics.DiagnosticSource",
-            "purl": "",
-            "version": "6.0.1"
           },
           {
             "name": "System.Diagnostics.EventLog",
@@ -1658,21 +1448,6 @@
             "version": "5.0.0"
           },
           {
-            "name": "System.IdentityModel.Tokens.Jwt",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "System.Memory.Data",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
-            "name": "System.Runtime.CompilerServices.Unsafe",
-            "purl": "",
-            "version": "6.0.0"
-          },
-          {
             "name": "System.Runtime.Loader",
             "purl": "",
             "version": "4.3.0"
@@ -1686,11 +1461,6 @@
             "name": "System.Security.Cryptography.Pkcs",
             "purl": "",
             "version": "8.0.1"
-          },
-          {
-            "name": "System.Security.Cryptography.ProtectedData",
-            "purl": "",
-            "version": "8.0.0"
           },
           {
             "name": "System.Security.Principal.Windows",
@@ -1782,14 +1552,14 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-clibs",
-            "version": "15.1p2"
+            "version": "15.1p4"
           },
           {
             "licenses": [
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-clibs-lib32",
-            "version": "15.1p2"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -1803,7 +1573,7 @@
               "BSD-3-Clause"
             ],
             "name": "FreeBSD-dhclient",
-            "version": "15.1"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -1838,7 +1608,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-libcasper",
-            "version": "15.1"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -1929,7 +1699,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-openssl-lib",
-            "version": "15.1p3"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -1964,14 +1734,14 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p3"
+            "version": "15.1p4"
           },
           {
             "licenses": [
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime-lib32",
-            "version": "15.1p1"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -1992,7 +1762,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-utilities",
-            "version": "15.1p2"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -2020,7 +1790,7 @@
               "PD"
             ],
             "name": "FreeBSD-zoneinfo",
-            "version": "15.1p2"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -2034,7 +1804,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.129"
+            "version": "3.130"
           },
           {
             "licenses": [
@@ -2140,14 +1910,14 @@
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.7.5"
+            "version": "2.8.4"
           },
           {
             "licenses": [
               "GPLv3"
             ],
             "name": "radarr",
-            "version": "6.1.1.10360"
+            "version": "6.4.4.10685"
           },
           {
             "licenses": [
@@ -2188,7 +1958,7 @@
       },
       "source": "upstream",
       "summary": {
-        "dotnet": 128,
+        "dotnet": 105,
         "freebsd": 61,
         "go": 0,
         "java": 0,
@@ -2197,25 +1967,15 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 189
+        "total": 166
       }
     },
     "nightly": {
-      "app_version": "6.4.4.10716",
+      "app_version": "6.4.4.10726",
       "arch": "amd64",
-      "generated": "2026-10-04T19:33:00Z",
+      "generated": "2026-10-10T21:16:27Z",
       "packages": {
         "dotnet": [
-          {
-            "name": "Azure.Core",
-            "purl": "",
-            "version": "1.47.1"
-          },
-          {
-            "name": "Azure.Identity",
-            "purl": "",
-            "version": "1.14.2"
-          },
           {
             "name": "BouncyCastle.Cryptography",
             "purl": "",
@@ -2325,31 +2085,6 @@
             "name": "Microsoft.AspNetCore.Cryptography.KeyDerivation",
             "purl": "",
             "version": "8.0.27"
-          },
-          {
-            "name": "Microsoft.Bcl.AsyncInterfaces",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
-            "name": "Microsoft.Bcl.Cryptography",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
-            "name": "Microsoft.Data.SqlClient",
-            "purl": "",
-            "version": "6.1.1"
-          },
-          {
-            "name": "Microsoft.Extensions.Caching.Abstractions",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
-            "name": "Microsoft.Extensions.Caching.Memory",
-            "purl": "",
-            "version": "8.0.1"
           },
           {
             "name": "Microsoft.Extensions.Configuration",
@@ -2492,46 +2227,6 @@
             "version": "8.0.0"
           },
           {
-            "name": "Microsoft.Identity.Client",
-            "purl": "",
-            "version": "4.73.1"
-          },
-          {
-            "name": "Microsoft.Identity.Client.Extensions.Msal",
-            "purl": "",
-            "version": "4.73.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.Abstractions",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.JsonWebTokens",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.Logging",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.Protocols",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.Protocols.OpenIdConnect",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.Tokens",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
             "name": "Microsoft.NETCore.App.Runtime.freebsd-x64",
             "purl": "",
             "version": "8.0.27"
@@ -2540,11 +2235,6 @@
             "name": "Microsoft.OpenApi",
             "purl": "",
             "version": "1.6.23"
-          },
-          {
-            "name": "Microsoft.SqlServer.Server",
-            "purl": "",
-            "version": "1.0.0"
           },
           {
             "name": "Microsoft.Win32.SystemEvents",
@@ -2707,11 +2397,6 @@
             "version": "8.1.4"
           },
           {
-            "name": "System.ClientModel",
-            "purl": "",
-            "version": "1.5.1"
-          },
-          {
             "name": "System.ComponentModel",
             "purl": "",
             "version": "4.3.0"
@@ -2722,19 +2407,9 @@
             "version": "5.0.0"
           },
           {
-            "name": "System.Configuration.ConfigurationManager",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
             "name": "System.Data.SQLite",
             "purl": "",
             "version": "2.0.4"
-          },
-          {
-            "name": "System.Diagnostics.DiagnosticSource",
-            "purl": "",
-            "version": "6.0.1"
           },
           {
             "name": "System.Diagnostics.EventLog",
@@ -2757,21 +2432,6 @@
             "version": "5.0.0"
           },
           {
-            "name": "System.IdentityModel.Tokens.Jwt",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "System.Memory.Data",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
-            "name": "System.Runtime.CompilerServices.Unsafe",
-            "purl": "",
-            "version": "6.0.0"
-          },
-          {
             "name": "System.Runtime.Loader",
             "purl": "",
             "version": "4.3.0"
@@ -2785,11 +2445,6 @@
             "name": "System.Security.Cryptography.Pkcs",
             "purl": "",
             "version": "8.0.1"
-          },
-          {
-            "name": "System.Security.Cryptography.ProtectedData",
-            "purl": "",
-            "version": "8.0.0"
           },
           {
             "name": "System.Security.Principal.Windows",
@@ -2881,14 +2536,14 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-clibs",
-            "version": "15.1p2"
+            "version": "15.1p4"
           },
           {
             "licenses": [
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-clibs-lib32",
-            "version": "15.1p2"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -2902,7 +2557,7 @@
               "BSD-3-Clause"
             ],
             "name": "FreeBSD-dhclient",
-            "version": "15.1"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -2937,7 +2592,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-libcasper",
-            "version": "15.1"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -3028,7 +2683,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-openssl-lib",
-            "version": "15.1p3"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -3063,14 +2718,14 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p3"
+            "version": "15.1p4"
           },
           {
             "licenses": [
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime-lib32",
-            "version": "15.1p1"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -3091,7 +2746,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-utilities",
-            "version": "15.1p2"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -3119,7 +2774,7 @@
               "PD"
             ],
             "name": "FreeBSD-zoneinfo",
-            "version": "15.1p2"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -3133,7 +2788,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.129"
+            "version": "3.130"
           },
           {
             "licenses": [
@@ -3239,14 +2894,14 @@
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.7.5"
+            "version": "2.8.4"
           },
           {
             "licenses": [
               "GPLv3"
             ],
             "name": "radarr",
-            "version": "6.1.1.10360"
+            "version": "6.4.4.10685"
           },
           {
             "licenses": [
@@ -3287,7 +2942,7 @@
       },
       "source": "upstream",
       "summary": {
-        "dotnet": 128,
+        "dotnet": 105,
         "freebsd": 61,
         "go": 0,
         "java": 0,
@@ -3296,25 +2951,15 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 189
+        "total": 166
       }
     },
     "pkg": {
-      "app_version": "6.1.1.10360",
+      "app_version": "6.4.4.10685",
       "arch": "amd64",
-      "generated": "2026-10-04T19:33:46Z",
+      "generated": "2026-10-10T21:16:13Z",
       "packages": {
         "dotnet": [
-          {
-            "name": "Azure.Core",
-            "purl": "",
-            "version": "1.47.1"
-          },
-          {
-            "name": "Azure.Identity",
-            "purl": "",
-            "version": "1.14.2"
-          },
           {
             "name": "BouncyCastle.Cryptography",
             "purl": "",
@@ -3323,7 +2968,7 @@
           {
             "name": "Dapper",
             "purl": "",
-            "version": "2.1.66"
+            "version": "2.1.79"
           },
           {
             "name": "Diacritical.Net",
@@ -3388,7 +3033,7 @@
           {
             "name": "IPAddressRange",
             "purl": "",
-            "version": "6.2.0"
+            "version": "6.3.0"
           },
           {
             "name": "Ical.Net",
@@ -3408,47 +3053,22 @@
           {
             "name": "MailKit",
             "purl": "",
-            "version": "4.15.1"
+            "version": "4.16.0"
           },
           {
             "name": "Microsoft.AspNetCore.App.Runtime.freebsd-x64",
             "purl": "",
-            "version": "8.0.12"
+            "version": "8.0.27"
           },
           {
             "name": "Microsoft.AspNetCore.Cryptography.Internal",
             "purl": "",
-            "version": "8.0.17"
+            "version": "8.0.27"
           },
           {
             "name": "Microsoft.AspNetCore.Cryptography.KeyDerivation",
             "purl": "",
-            "version": "8.0.17"
-          },
-          {
-            "name": "Microsoft.Bcl.AsyncInterfaces",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
-            "name": "Microsoft.Bcl.Cryptography",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
-            "name": "Microsoft.Data.SqlClient",
-            "purl": "",
-            "version": "6.1.1"
-          },
-          {
-            "name": "Microsoft.Extensions.Caching.Abstractions",
-            "purl": "",
-            "version": "8.0.0"
-          },
-          {
-            "name": "Microsoft.Extensions.Caching.Memory",
-            "purl": "",
-            "version": "8.0.1"
+            "version": "8.0.27"
           },
           {
             "name": "Microsoft.Extensions.Configuration",
@@ -3548,7 +3168,7 @@
           {
             "name": "Microsoft.Extensions.Logging.Abstractions",
             "purl": "",
-            "version": "8.0.3"
+            "version": "8.0.2"
           },
           {
             "name": "Microsoft.Extensions.Logging.Configuration",
@@ -3591,59 +3211,14 @@
             "version": "8.0.0"
           },
           {
-            "name": "Microsoft.Identity.Client",
-            "purl": "",
-            "version": "4.73.1"
-          },
-          {
-            "name": "Microsoft.Identity.Client.Extensions.Msal",
-            "purl": "",
-            "version": "4.73.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.Abstractions",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.JsonWebTokens",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.Logging",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.Protocols",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.Protocols.OpenIdConnect",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "Microsoft.IdentityModel.Tokens",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
             "name": "Microsoft.NETCore.App.Runtime.freebsd-x64",
             "purl": "",
-            "version": "8.0.12"
+            "version": "8.0.27"
           },
           {
             "name": "Microsoft.OpenApi",
             "purl": "",
             "version": "1.6.23"
-          },
-          {
-            "name": "Microsoft.SqlServer.Server",
-            "purl": "",
-            "version": "1.0.0"
           },
           {
             "name": "Microsoft.Win32.SystemEvents",
@@ -3653,7 +3228,7 @@
           {
             "name": "MimeKit",
             "purl": "",
-            "version": "4.15.1"
+            "version": "4.16.0"
           },
           {
             "name": "Mono.Nat",
@@ -3673,17 +3248,17 @@
           {
             "name": "NLog",
             "purl": "",
-            "version": "5.4.0"
+            "version": "5.5.1"
           },
           {
             "name": "NLog.Extensions.Logging",
             "purl": "",
-            "version": "5.4.0"
+            "version": "5.5.0"
           },
           {
             "name": "NLog.Layouts.ClefJsonLayout",
             "purl": "",
-            "version": "1.0.3"
+            "version": "1.0.5"
           },
           {
             "name": "NLog.Targets.Syslog",
@@ -3693,7 +3268,7 @@
           {
             "name": "Newtonsoft.Json",
             "purl": "",
-            "version": "13.0.3"
+            "version": "13.0.4"
           },
           {
             "name": "NodaTime",
@@ -3703,12 +3278,12 @@
           {
             "name": "Npgsql",
             "purl": "",
-            "version": "9.0.3"
+            "version": "9.0.5"
           },
           {
             "name": "Polly",
             "purl": "",
-            "version": "8.6.0"
+            "version": "8.6.6"
           },
           {
             "name": "Polly.Contrib.WaitAndRetry",
@@ -3718,7 +3293,7 @@
           {
             "name": "Polly.Core",
             "purl": "",
-            "version": "8.6.0"
+            "version": "8.6.6"
           },
           {
             "name": "Radarr",
@@ -3768,7 +3343,7 @@
           {
             "name": "Sentry",
             "purl": "",
-            "version": "4.0.2"
+            "version": "5.16.3"
           },
           {
             "name": "Servarr.FFMpegCore",
@@ -3778,7 +3353,7 @@
           {
             "name": "Servarr.FFprobe",
             "purl": "",
-            "version": "5.1.4.112"
+            "version": "5.1.10.124"
           },
           {
             "name": "SharpZipLib",
@@ -3806,11 +3381,6 @@
             "version": "8.1.4"
           },
           {
-            "name": "System.ClientModel",
-            "purl": "",
-            "version": "1.5.1"
-          },
-          {
             "name": "System.ComponentModel",
             "purl": "",
             "version": "4.3.0"
@@ -3821,19 +3391,9 @@
             "version": "5.0.0"
           },
           {
-            "name": "System.Configuration.ConfigurationManager",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
             "name": "System.Data.SQLite",
             "purl": "",
-            "version": "2.0.2"
-          },
-          {
-            "name": "System.Diagnostics.DiagnosticSource",
-            "purl": "",
-            "version": "6.0.1"
+            "version": "2.0.4"
           },
           {
             "name": "System.Diagnostics.EventLog",
@@ -3843,7 +3403,7 @@
           {
             "name": "System.Drawing.Common",
             "purl": "",
-            "version": "8.0.20"
+            "version": "8.0.27"
           },
           {
             "name": "System.Formats.Asn1",
@@ -3854,21 +3414,6 @@
             "name": "System.IO.FileSystem.AccessControl",
             "purl": "",
             "version": "5.0.0"
-          },
-          {
-            "name": "System.IdentityModel.Tokens.Jwt",
-            "purl": "",
-            "version": "7.7.1"
-          },
-          {
-            "name": "System.Memory.Data",
-            "purl": "",
-            "version": "8.0.1"
-          },
-          {
-            "name": "System.Runtime.CompilerServices.Unsafe",
-            "purl": "",
-            "version": "6.0.0"
           },
           {
             "name": "System.Runtime.Loader",
@@ -3884,11 +3429,6 @@
             "name": "System.Security.Cryptography.Pkcs",
             "purl": "",
             "version": "8.0.1"
-          },
-          {
-            "name": "System.Security.Cryptography.ProtectedData",
-            "purl": "",
-            "version": "8.0.0"
           },
           {
             "name": "System.Security.Principal.Windows",
@@ -3908,7 +3448,7 @@
           {
             "name": "System.Text.Json",
             "purl": "",
-            "version": "8.0.5"
+            "version": "8.0.6"
           },
           {
             "name": "runtime.any.System.IO",
@@ -3980,7 +3520,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-clibs",
-            "version": "15.1p2"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -3994,7 +3534,7 @@
               "BSD-3-Clause"
             ],
             "name": "FreeBSD-dhclient",
-            "version": "15.1"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -4029,7 +3569,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-libcasper",
-            "version": "15.1"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -4092,7 +3632,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-openssl-lib",
-            "version": "15.1p3"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -4127,7 +3667,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p3"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -4148,7 +3688,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-utilities",
-            "version": "15.1p2"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -4176,7 +3716,7 @@
               "PD"
             ],
             "name": "FreeBSD-zoneinfo",
-            "version": "15.1p2"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -4190,7 +3730,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.129"
+            "version": "3.130"
           },
           {
             "licenses": [
@@ -4275,21 +3815,21 @@
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.7.5"
+            "version": "2.8.4"
           },
           {
             "licenses": [
               "GPLv3"
             ],
             "name": "radarr",
-            "version": "6.1.1.10360"
+            "version": "6.4.4.10685"
           },
           {
             "licenses": [
               "GPLv3"
             ],
             "name": "readline",
-            "version": "8.3.3"
+            "version": "8.3.6"
           },
           {
             "licenses": [
@@ -4310,7 +3850,7 @@
               "PD"
             ],
             "name": "sqlite3",
-            "version": "3.53.3,1"
+            "version": "3.53.4,1"
           }
         ],
         "go": [],
@@ -4323,7 +3863,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 128,
+        "dotnet": 105,
         "freebsd": 52,
         "go": 0,
         "java": 0,
@@ -4332,13 +3872,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 180
+        "total": 157
       }
     },
     "pkg-latest": {
       "app_version": "6.4.4.10685",
       "arch": "amd64",
-      "generated": "2026-10-04T19:31:39Z",
+      "generated": "2026-10-10T21:16:21Z",
       "packages": {
         "dotnet": [
           {
@@ -4901,7 +4441,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-clibs",
-            "version": "15.1p2"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -4915,7 +4455,7 @@
               "BSD-3-Clause"
             ],
             "name": "FreeBSD-dhclient",
-            "version": "15.1"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -4950,7 +4490,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-libcasper",
-            "version": "15.1"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -5013,7 +4553,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-openssl-lib",
-            "version": "15.1p3"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -5048,7 +4588,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p3"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -5069,7 +4609,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-utilities",
-            "version": "15.1p2"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -5097,7 +4637,7 @@
               "PD"
             ],
             "name": "FreeBSD-zoneinfo",
-            "version": "15.1p2"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -5111,7 +4651,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.129"
+            "version": "3.130"
           },
           {
             "licenses": [
