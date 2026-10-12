@@ -14,7 +14,7 @@ COOLDOWN="${WATCHDOG_COOLDOWN:-60}"
 # Allow disabling via environment
 if [ "${WATCHDOG_DISABLE}" = "true" ]; then
     echo "[watchdog] Disabled via WATCHDOG_DISABLE=true"
-    exec sleep infinity
+    exec sleep 2147483647 # FreeBSD sleep has no "infinity"
 fi
 
 echo "[watchdog] Starting with warmup=${WARMUP}s interval=${INTERVAL}s"
