@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-10T21:17:04Z",
+  "generated": "2026-10-12T23:00:46Z",
   "image": "radarr",
   "tags": {
     "develop": {
       "app_version": "6.4.4.10685",
       "arch": "amd64",
-      "generated": "2026-10-10T21:16:23Z",
+      "generated": "2026-10-12T22:58:20Z",
       "packages": {
         "dotnet": [
           {
@@ -919,7 +919,7 @@
               "APACHE20"
             ],
             "name": "openssl",
-            "version": "3.0.22,1"
+            "version": "3.5.9,1"
           },
           {
             "licenses": [
@@ -940,7 +940,7 @@
               "GPLv3"
             ],
             "name": "readline",
-            "version": "8.3.3"
+            "version": "8.3.6"
           },
           {
             "licenses": [
@@ -961,7 +961,7 @@
               "PD"
             ],
             "name": "sqlite3",
-            "version": "3.53.3,1"
+            "version": "3.53.4,1"
           }
         ],
         "go": [],
@@ -989,7 +989,7 @@
     "latest": {
       "app_version": "6.4.4.10685",
       "arch": "amd64",
-      "generated": "2026-10-10T21:16:01Z",
+      "generated": "2026-10-12T22:59:47Z",
       "packages": {
         "dotnet": [
           {
@@ -1903,7 +1903,7 @@
               "APACHE20"
             ],
             "name": "openssl",
-            "version": "3.0.22,1"
+            "version": "3.5.9,1"
           },
           {
             "licenses": [
@@ -1924,7 +1924,7 @@
               "GPLv3"
             ],
             "name": "readline",
-            "version": "8.3.3"
+            "version": "8.3.6"
           },
           {
             "licenses": [
@@ -1945,7 +1945,7 @@
               "PD"
             ],
             "name": "sqlite3",
-            "version": "3.53.3,1"
+            "version": "3.53.4,1"
           }
         ],
         "go": [],
@@ -1971,9 +1971,9 @@
       }
     },
     "nightly": {
-      "app_version": "6.4.4.10726",
+      "app_version": "6.4.4.10741",
       "arch": "amd64",
-      "generated": "2026-10-10T21:16:27Z",
+      "generated": "2026-10-12T22:58:06Z",
       "packages": {
         "dotnet": [
           {
@@ -2887,7 +2887,7 @@
               "APACHE20"
             ],
             "name": "openssl",
-            "version": "3.0.22,1"
+            "version": "3.5.9,1"
           },
           {
             "licenses": [
@@ -2908,7 +2908,7 @@
               "GPLv3"
             ],
             "name": "readline",
-            "version": "8.3.3"
+            "version": "8.3.6"
           },
           {
             "licenses": [
@@ -2929,7 +2929,7 @@
               "PD"
             ],
             "name": "sqlite3",
-            "version": "3.53.3,1"
+            "version": "3.53.4,1"
           }
         ],
         "go": [],
@@ -2957,7 +2957,7 @@
     "pkg": {
       "app_version": "6.4.4.10685",
       "arch": "amd64",
-      "generated": "2026-10-10T21:16:13Z",
+      "generated": "2026-10-12T22:59:07Z",
       "packages": {
         "dotnet": [
           {
@@ -3878,7 +3878,7 @@
     "pkg-latest": {
       "app_version": "6.4.4.10685",
       "arch": "amd64",
-      "generated": "2026-10-10T21:16:21Z",
+      "generated": "2026-10-12T22:58:27Z",
       "packages": {
         "dotnet": [
           {
@@ -4651,7 +4651,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.130"
+            "version": "3.131"
           },
           {
             "licenses": [
