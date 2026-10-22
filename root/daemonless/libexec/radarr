@@ -1,5 +1,5 @@
 #!/bin/sh
-# Radarr s6 service
+# Start Radarr; /init has already dropped to bsd.
 
 # Required environment for .NET on FreeBSD
 export HOME=/config
@@ -12,8 +12,5 @@ export CLR_OPENSSL_VERSION_OVERRIDE=$SSL_VER
 export DOTNET_SYSTEM_NET_DISABLEIPV6=1
 export System_Globalization_Invariant=true
 
-# Signal readiness when the port is responsive
-s6-ready-when fetch -qo /dev/null http://localhost:7878/ping
-
 cd /config
-exec /usr/local/bin/s6-setuidgid bsd /usr/local/share/radarr/Radarr -nobrowser -data=/config
+exec /usr/local/share/radarr/Radarr -nobrowser -data=/config "$@"

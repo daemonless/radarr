@@ -51,9 +51,10 @@ RUN RADARR_VERSION=$(fetch -qo - "${UPSTREAM_URL}" | grep -o '"version":"[^"].*"
 
 # Copy service definition and init scripts
 COPY root/ /
+RUN rm /daemonless/libexec/radarr.pkg && \
+    chmod +x /daemonless/init.d/20-radarr /daemonless/libexec/radarr
 
-# Make scripts executable
-RUN chmod +x /etc/services.d/radarr/run /etc/cont-init.d/* 2>/dev/null || true
+CMD ["/daemonless/libexec/radarr"]
 
 # --- Expose (Injected by Generator) ---
 {%- if ports %}

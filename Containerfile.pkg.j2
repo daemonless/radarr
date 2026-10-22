@@ -1,5 +1,5 @@
 ARG BASE_VERSION=15.1
-FROM ghcr.io/daemonless/base:${BASE_VERSION}
+FROM ghcr.io/daemonless/base-exec:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
 ARG PKG_NAME=radarr
@@ -47,15 +47,11 @@ RUN ln -sf /usr/local/lib/libsqlite3.so /usr/local/share/radarr/bin/libe_sqlite3
 # Copy service definition
 COPY root/ /
 
-# Use pkg-specific run script
-COPY root/etc/services.d/radarr/run.pkg /etc/services.d/radarr/run
+# The pkg layout's launcher
+RUN mv /daemonless/libexec/radarr.pkg /daemonless/libexec/radarr && \
+    chmod +x /daemonless/init.d/20-radarr /daemonless/libexec/radarr
 
-# Make scripts executable
-RUN chmod +x /etc/services.d/radarr/run /etc/cont-init.d/* 2>/dev/null || true
-
-# Set up s6 service link
-RUN mkdir -p /run/s6/services/radarr && \
-    ln -sf /etc/services.d/radarr/run /run/s6/services/radarr/run
+CMD ["/daemonless/libexec/radarr"]
 
 # --- Expose (Injected by Generator) ---
 {%- if ports %}
