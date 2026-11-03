@@ -159,8 +159,7 @@ services:
 ```
 
 Save as `bastille-compose.yml`, then run `bastille up`.
-
-Access at: `http://localhost:7878`
+Open `http://<server>:7878` from another machine (the server's own browser can't use a published port).
 
 ## Parameters
 
