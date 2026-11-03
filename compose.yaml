@@ -33,7 +33,7 @@ services:
     image: ghcr.io/daemonless/radarr:latest
     container_name: radarr
     restart: unless-stopped
-    
+
     annotations:
       org.freebsd.jail.allow.mlock: "true"
 
