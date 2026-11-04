@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-03T13:34:55Z",
+  "generated": "2026-11-04T17:05:51Z",
   "image": "radarr",
   "tags": {
     "develop": {
       "app_version": "7.0.1.10859",
       "arch": "amd64",
-      "generated": "2026-11-03T13:34:10Z",
+      "generated": "2026-11-04T17:02:45Z",
       "packages": {
         "dotnet": [
           {
@@ -1000,7 +1000,7 @@
               "PD"
             ],
             "name": "sqlite3",
-            "version": "3.53.4,1"
+            "version": "3.54.1,1"
           }
         ],
         "go": [],
@@ -1028,7 +1028,7 @@
     "latest": {
       "app_version": "6.4.4.10685",
       "arch": "amd64",
-      "generated": "2026-11-03T13:33:46Z",
+      "generated": "2026-11-04T17:02:29Z",
       "packages": {
         "dotnet": [
           {
@@ -1963,7 +1963,7 @@
               "PD"
             ],
             "name": "sqlite3",
-            "version": "3.53.4,1"
+            "version": "3.54.1,1"
           }
         ],
         "go": [],
@@ -1989,9 +1989,9 @@
       }
     },
     "nightly": {
-      "app_version": "7.0.1.10859",
+      "app_version": "7.0.2.10869",
       "arch": "amd64",
-      "generated": "2026-11-03T13:33:27Z",
+      "generated": "2026-11-04T17:04:59Z",
       "packages": {
         "dotnet": [
           {
@@ -2986,7 +2986,7 @@
               "PD"
             ],
             "name": "sqlite3",
-            "version": "3.53.4,1"
+            "version": "3.54.1,1"
           }
         ],
         "go": [],
@@ -3014,7 +3014,7 @@
     "pkg": {
       "app_version": "6.4.4.10685",
       "arch": "amd64",
-      "generated": "2026-11-03T13:33:19Z",
+      "generated": "2026-11-04T17:03:03Z",
       "packages": {
         "dotnet": [
           {
@@ -3914,7 +3914,7 @@
     "pkg-latest": {
       "app_version": "6.4.4.10685",
       "arch": "amd64",
-      "generated": "2026-11-03T13:34:02Z",
+      "generated": "2026-11-04T17:02:57Z",
       "packages": {
         "dotnet": [
           {
