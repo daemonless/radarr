@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-15T01:14:38Z",
+  "generated": "2026-11-15T10:18:51Z",
   "image": "radarr",
   "tags": {
     "develop": {
@@ -3014,7 +3014,7 @@
     "pkg": {
       "app_version": "6.4.4.10685",
       "arch": "amd64",
-      "generated": "2026-11-15T01:12:57Z",
+      "generated": "2026-11-15T10:18:08Z",
       "packages": {
         "dotnet": [
           {
@@ -3823,7 +3823,7 @@
               "MIT"
             ],
             "name": "krb5",
-            "version": "1.22.2_3"
+            "version": "1.22.3"
           },
           {
             "licenses": [
@@ -3865,7 +3865,7 @@
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.8.4"
+            "version": "2.9.2"
           },
           {
             "licenses": [
