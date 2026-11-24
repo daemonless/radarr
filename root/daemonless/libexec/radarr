@@ -9,6 +9,7 @@ export LD_LIBRARY_PATH=/usr/local/lib
 # Detect OpenSSL version (3.0=30, 3.5=35)
 SSL_VER=$(openssl version | sed 's/OpenSSL \([0-9]*\)\.\([0-9]*\).*/\1\2/')
 export CLR_OPENSSL_VERSION_OVERRIDE=$SSL_VER
+export DOTNET_OPENSSL_VERSION_OVERRIDE=$SSL_VER
 export DOTNET_SYSTEM_NET_DISABLEIPV6=1
 export System_Globalization_Invariant=true
 
